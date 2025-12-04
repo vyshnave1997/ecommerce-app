@@ -1,0 +1,315 @@
+/* 🚀 TAILwind core */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🌍 GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🖋 BODY TYPOGRAPHY */
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+  color: #333;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 📱 RESPONSIVE HELPERS */
+.desktop-only {
+  @media (max-width: 768px) {
+    display: none !important;
+  }
+}
+
+.mobile-only {
+  @media (min-width: 769px) {
+    display: none !important;
+  }
+}
+
+.logo-text {
+  @media (max-width: 768px) {
+    font-size: 1rem !important;
+  }
+}
+
+/* 🎨 SHADCN THEME VARIABLES */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+    
+    /* 🎨 Ant Design Token Variables */
+    --ant-primary-color: #1890ff;
+    --ant-primary-color-hover: #40a9ff;
+    --ant-primary-color-active: #096dd9;
+    --ant-primary-color-outline: rgba(24, 144, 255, 0.2);
+    --ant-primary-1: #e6f7ff;
+    --ant-primary-2: #bae7ff;
+    --ant-primary-3: #91d5ff;
+    --ant-primary-4: #69c0ff;
+    --ant-primary-5: #40a9ff;
+    --ant-primary-6: #1890ff;
+    --ant-primary-7: #096dd9;
+    --ant-primary-8: #0050b3;
+    --ant-primary-9: #003a8c;
+    --ant-primary-10: #002766;
+    
+    --ant-success-color: #52c41a;
+    --ant-warning-color: #faad14;
+    --ant-error-color: #ff4d4f;
+    --ant-info-color: #1890ff;
+    
+    --ant-text-color: rgba(0, 0, 0, 0.85);
+    --ant-text-color-secondary: rgba(0, 0, 0, 0.45);
+    --ant-text-color-disabled: rgba(0, 0, 0, 0.25);
+    --ant-heading-color: rgba(0, 0, 0, 0.85);
+    
+    --ant-bg-color: #ffffff;
+    --ant-bg-color-container: #ffffff;
+    --ant-bg-color-elevated: #ffffff;
+    --ant-bg-color-layout: #f0f2f5;
+    --ant-bg-color-secondary: #fafafa;
+    
+    --ant-border-color: #d9d9d9;
+    --ant-border-color-secondary: #f0f0f0;
+    --ant-border-color-split: #f0f0f0;
+    
+    --ant-box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+    --ant-box-shadow-secondary: 0 1px 2px -2px rgba(0, 0, 0, 0.16), 0 3px 6px 0 rgba(0, 0, 0, 0.12), 0 5px 12px 4px rgba(0, 0, 0, 0.09);
+    
+    --ant-font-size: 14px;
+    --ant-font-size-lg: 16px;
+    --ant-font-size-sm: 12px;
+    
+    --ant-font-weight-strong: 600;
+    --ant-font-weight-medium: 500;
+    --ant-font-weight-normal: 400;
+    
+    --ant-line-height: 1.5715;
+    --ant-line-height-lg: 1.5;
+    --ant-line-height-sm: 1.6667;
+    --ant-line-height-heading: 1.4;
+    
+    --ant-border-radius: 6px;
+    --ant-border-radius-sm: 4px;
+    --ant-border-radius-lg: 8px;
+    --ant-border-radius-xs: 2px;
+    
+    --ant-padding: 16px;
+    --ant-padding-lg: 24px;
+    --ant-padding-md: 16px;
+    --ant-padding-sm: 12px;
+    --ant-padding-xs: 8px;
+    
+    --ant-margin: 16px;
+    --ant-margin-lg: 24px;
+    --ant-margin-md: 16px;
+    --ant-margin-sm: 12px;
+    --ant-margin-xs: 8px;
+    
+    --ant-motion-duration-fast: 0.1s;
+    --ant-motion-duration-mid: 0.2s;
+    --ant-motion-duration-slow: 0.3s;
+    
+    --ant-motion-ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+    --ant-motion-ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+    --ant-motion-ease-in: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    --ant-motion-linear: linear;
+    
+    --ant-color-bg-container: var(--ant-bg-color-container);
+    --ant-color-text: var(--ant-text-color);
+    --ant-color-text-secondary: var(--ant-text-color-secondary);
+    --ant-color-text-heading: var(--ant-heading-color);
+    --ant-color-border: var(--ant-border-color);
+    --ant-color-border-secondary: var(--ant-border-color-secondary);
+    --ant-color-fill-alter: #fafafa;
+    --ant-color-primary: var(--ant-primary-color);
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    
+    /* 🌙 Dark Mode Ant Design Token Variables */
+    --ant-primary-color: #177ddc;
+    --ant-primary-color-hover: #3c9ae8;
+    --ant-primary-color-active: #095cb5;
+    --ant-primary-color-outline: rgba(23, 125, 220, 0.2);
+    --ant-primary-1: #111d2c;
+    --ant-primary-2: #112a45;
+    --ant-primary-3: #15395b;
+    --ant-primary-4: #164c7e;
+    --ant-primary-5: #1765ad;
+    --ant-primary-6: #177ddc;
+    --ant-primary-7: #3c9ae8;
+    --ant-primary-8: #65b7f3;
+    --ant-primary-9: #8dcff8;
+    --ant-primary-10: #b7e3fa;
+    
+    --ant-success-color: #49aa19;
+    --ant-warning-color: #d89614;
+    --ant-error-color: #a61d24;
+    --ant-info-color: #177ddc;
+    
+    --ant-text-color: rgba(255, 255, 255, 0.85);
+    --ant-text-color-secondary: rgba(255, 255, 255, 0.45);
+    --ant-text-color-disabled: rgba(255, 255, 255, 0.25);
+    --ant-heading-color: rgba(255, 255, 255, 0.85);
+    
+    --ant-bg-color: #141414;
+    --ant-bg-color-container: #1f1f1f;
+    --ant-bg-color-elevated: #1f1f1f;
+    --ant-bg-color-layout: #000000;
+    --ant-bg-color-secondary: #141414;
+    
+    --ant-border-color: #434343;
+    --ant-border-color-secondary: #303030;
+    --ant-border-color-split: #303030;
+    
+    --ant-box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.48), 0 6px 16px 0 rgba(0, 0, 0, 0.32), 0 9px 28px 8px rgba(0, 0, 0, 0.2);
+    --ant-box-shadow-secondary: 0 1px 2px -2px rgba(0, 0, 0, 0.64), 0 3px 6px 0 rgba(0, 0, 0, 0.48), 0 5px 12px 4px rgba(0, 0, 0, 0.36);
+    
+    --ant-color-bg-container: var(--ant-bg-color-container);
+    --ant-color-text: var(--ant-text-color);
+    --ant-color-text-secondary: var(--ant-text-color-secondary);
+    --ant-color-text-heading: var(--ant-heading-color);
+    --ant-color-border: var(--ant-border-color);
+    --ant-color-border-secondary: var(--ant-border-color-secondary);
+    --ant-color-fill-alter: #1f1f1f;
+    --ant-color-primary: var(--ant-primary-color);
+  }
+}
+
+/* 🔥 APPLY THEME TO DEFAULT BODY AND BORDERS */
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* 🎨 Ant Design Token CSS Variables Export */
+:root {
+  /* Colors */
+  --ant-color-primary: var(--ant-primary-color);
+  --ant-color-success: var(--ant-success-color);
+  --ant-color-warning: var(--ant-warning-color);
+  --ant-color-error: var(--ant-error-color);
+  --ant-color-info: var(--ant-info-color);
+  
+  /* Text Colors */
+  --ant-color-text: var(--ant-text-color);
+  --ant-color-text-secondary: var(--ant-text-color-secondary);
+  --ant-color-text-disabled: var(--ant-text-color-disabled);
+  --ant-color-text-heading: var(--ant-heading-color);
+  
+  /* Background Colors */
+  --ant-color-bg-container: var(--ant-bg-color-container);
+  --ant-color-bg-layout: var(--ant-bg-color-layout);
+  --ant-color-bg-elevated: var(--ant-bg-color-elevated);
+  --ant-color-bg-secondary: var(--ant-bg-color-secondary);
+  --ant-color-fill-alter: var(--ant-color-fill-alter);
+  
+  /* Border Colors */
+  --ant-color-border: var(--ant-border-color);
+  --ant-color-border-secondary: var(--ant-border-color-secondary);
+  --ant-color-border-split: var(--ant-border-color-split);
+  
+  /* Typography */
+  --ant-font-size: var(--ant-font-size);
+  --ant-font-size-lg: var(--ant-font-size-lg);
+  --ant-font-size-sm: var(--ant-font-size-sm);
+  
+  --ant-font-weight-strong: var(--ant-font-weight-strong);
+  --ant-font-weight-medium: var(--ant-font-weight-medium);
+  --ant-font-weight-normal: var(--ant-font-weight-normal);
+  
+  --ant-line-height: var(--ant-line-height);
+  --ant-line-height-lg: var(--ant-line-height-lg);
+  --ant-line-height-sm: var(--ant-line-height-sm);
+  --ant-line-height-heading: var(--ant-line-height-heading);
+  
+  /* Spacing */
+  --ant-padding: var(--ant-padding);
+  --ant-padding-lg: var(--ant-padding-lg);
+  --ant-padding-md: var(--ant-padding-md);
+  --ant-padding-sm: var(--ant-padding-sm);
+  --ant-padding-xs: var(--ant-padding-xs);
+  
+  --ant-margin: var(--ant-margin);
+  --ant-margin-lg: var(--ant-margin-lg);
+  --ant-margin-md: var(--ant-margin-md);
+  --ant-margin-sm: var(--ant-margin-sm);
+  --ant-margin-xs: var(--ant-margin-xs);
+  
+  /* Border Radius */
+  --ant-border-radius: var(--ant-border-radius);
+  --ant-border-radius-sm: var(--ant-border-radius-sm);
+  --ant-border-radius-lg: var(--ant-border-radius-lg);
+  --ant-border-radius-xs: var(--ant-border-radius-xs);
+  
+  /* Shadows */
+  --ant-box-shadow: var(--ant-box-shadow);
+  --ant-box-shadow-secondary: var(--ant-box-shadow-secondary);
+  
+  /* Motion */
+  --ant-motion-duration-fast: var(--ant-motion-duration-fast);
+  --ant-motion-duration-mid: var(--ant-motion-duration-mid);
+  --ant-motion-duration-slow: var(--ant-motion-duration-slow);
+  
+  --ant-motion-ease-in-out: var(--ant-motion-ease-in-out);
+  --ant-motion-ease-out: var(--ant-motion-ease-out);
+  --ant-motion-ease-in: var(--ant-motion-ease-in);
+  --ant-motion-linear: var(--ant-motion-linear);
+}

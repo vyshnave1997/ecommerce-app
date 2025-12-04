@@ -1,0 +1,1612 @@
+{
+  "categories": [
+    {
+  "id": "phones",
+  "name": "Phones",
+  "brands": [
+    {
+      "name": "Apple",
+      "products": [
+        {
+          "id": "phone-apple-001",
+          "name": "iPhone 15 Pro Max",
+          "image": "https://images.unsplash.com/photo-1592286927505-25f5d1f91e0c",
+          "description": "Titanium design with A17 Pro chip, 5x optical zoom, and ProMotion display",
+          "rating": 4.9,
+          "comments": 3456,
+          "price": 1199.99,
+          "discount": 5,
+          "colors": ["Natural Titanium", "Blue Titanium", "White Titanium", "Black Titanium"],
+          "sizes": ["128GB", "256GB", "512GB", "1TB"]
+        },
+        {
+          "id": "phone-apple-002",
+          "name": "iPhone 15 Pro",
+          "image": "https://images.unsplash.com/photo-1678652197950-91e3f0a3189f",
+          "description": "Pro camera system with A17 Pro chip and titanium design",
+          "rating": 4.8,
+          "comments": 2987,
+          "price": 999.99,
+          "discount": 8,
+          "colors": ["Natural Titanium", "Blue Titanium", "White Titanium", "Black Titanium"],
+          "sizes": ["128GB", "256GB", "512GB", "1TB"]
+        },
+        {
+          "id": "phone-apple-003",
+          "name": "iPhone 15",
+          "image": "https://images.unsplash.com/photo-1696446702061-cbd2d3a06d39",
+          "description": "Dynamic Island design with 48MP main camera and all-day battery",
+          "rating": 4.7,
+          "comments": 4321,
+          "price": 799.99,
+          "discount": 10,
+          "colors": ["Black", "Blue", "Green", "Yellow", "Pink"],
+          "sizes": ["128GB", "256GB", "512GB"]
+        },
+        {
+          "id": "phone-apple-004",
+          "name": "iPhone 14",
+          "image": "https://images.unsplash.com/photo-1663499482523-1c0c1bae4ce1",
+          "description": "Advanced dual-camera system with Photonic Engine and Crash Detection",
+          "rating": 4.6,
+          "comments": 5678,
+          "price": 699.99,
+          "discount": 15,
+          "colors": ["Midnight", "Starlight", "Blue", "Purple", "Red"],
+          "sizes": ["128GB", "256GB", "512GB"]
+        },
+        {
+          "id": "phone-apple-005",
+          "name": "iPhone SE (3rd Gen)",
+          "image": "https://images.unsplash.com/photo-1611472173362-3f53dbd65d80",
+          "description": "Compact design with A15 Bionic chip and Touch ID",
+          "rating": 4.5,
+          "comments": 2134,
+          "price": 429.99,
+          "discount": 12,
+          "colors": ["Midnight", "Starlight", "Red"],
+          "sizes": ["64GB", "128GB", "256GB"]
+        }
+      ]
+    },
+    {
+      "name": "Samsung",
+      "products": [
+        {
+          "id": "phone-samsung-001",
+          "name": "Samsung Galaxy S24 Ultra",
+          "image": "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c",
+          "description": "200MP camera with AI-powered Galaxy AI, titanium frame, and S Pen",
+          "rating": 4.8,
+          "comments": 2876,
+          "price": 1299.99,
+          "discount": 10,
+          "colors": ["Titanium Gray", "Titanium Black", "Titanium Violet", "Titanium Yellow"],
+          "sizes": ["256GB", "512GB", "1TB"]
+        },
+        {
+          "id": "phone-samsung-002",
+          "name": "Samsung Galaxy S24+",
+          "image": "https://images.unsplash.com/photo-1691669914556-002048a6c0e5",
+          "description": "Large 6.7-inch display with enhanced AI features and improved battery",
+          "rating": 4.7,
+          "comments": 1987,
+          "price": 999.99,
+          "discount": 12,
+          "colors": ["Onyx Black", "Marble Gray", "Cobalt Violet", "Amber Yellow"],
+          "sizes": ["256GB", "512GB"]
+        },
+        {
+          "id": "phone-samsung-003",
+          "name": "Samsung Galaxy S24",
+          "image": "https://images.unsplash.com/photo-1610945264803-c22b62d2a7b3",
+          "description": "Compact flagship with powerful AI capabilities and stunning camera",
+          "rating": 4.6,
+          "comments": 3421,
+          "price": 799.99,
+          "discount": 15,
+          "colors": ["Onyx Black", "Marble Gray", "Cobalt Violet", "Amber Yellow"],
+          "sizes": ["128GB", "256GB"]
+        },
+        {
+          "id": "phone-samsung-004",
+          "name": "Samsung Galaxy Z Fold5",
+          "image": "https://images.unsplash.com/photo-1678685888221-cda773a3dcdb",
+          "description": "Foldable phone with 7.6-inch main display and multitasking capabilities",
+          "rating": 4.7,
+          "comments": 1234,
+          "price": 1799.99,
+          "discount": 8,
+          "colors": ["Icy Blue", "Phantom Black", "Cream"],
+          "sizes": ["256GB", "512GB", "1TB"]
+        },
+        {
+          "id": "phone-samsung-005",
+          "name": "Samsung Galaxy A54 5G",
+          "image": "https://images.unsplash.com/photo-1691669914556-002048a6c0e5",
+          "description": "Mid-range phone with premium features, 120Hz display, and 5G connectivity",
+          "rating": 4.5,
+          "comments": 4567,
+          "price": 449.99,
+          "discount": 18,
+          "colors": ["Awesome Graphite", "Awesome Violet", "Awesome Lime", "Awesome White"],
+          "sizes": ["128GB", "256GB"]
+        }
+      ]
+    },
+    {
+      "name": "Google",
+      "products": [
+        {
+          "id": "phone-google-001",
+          "name": "Google Pixel 8 Pro",
+          "image": "https://images.unsplash.com/photo-1598327105666-5b89351aff97",
+          "description": "AI-powered photography with Google Tensor G3 and 7 years of updates",
+          "rating": 4.8,
+          "comments": 2345,
+          "price": 999.99,
+          "discount": 10,
+          "colors": ["Obsidian", "Porcelain", "Bay"],
+          "sizes": ["128GB", "256GB", "512GB"]
+        },
+        {
+          "id": "phone-google-002",
+          "name": "Google Pixel 8",
+          "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+          "description": "Compact flagship with exceptional camera and pure Android experience",
+          "rating": 4.7,
+          "comments": 3456,
+          "price": 699.99,
+          "discount": 12,
+          "colors": ["Obsidian", "Hazel", "Rose"],
+          "sizes": ["128GB", "256GB"]
+        },
+        {
+          "id": "phone-google-003",
+          "name": "Google Pixel 7a",
+          "image": "https://images.unsplash.com/photo-1598327105666-5b89351aff97",
+          "description": "Affordable Pixel with flagship camera features and wireless charging",
+          "rating": 4.6,
+          "comments": 4567,
+          "price": 499.99,
+          "discount": 15,
+          "colors": ["Charcoal", "Snow", "Sea", "Coral"],
+          "sizes": ["128GB"]
+        },
+        {
+          "id": "phone-google-004",
+          "name": "Google Pixel Fold",
+          "image": "https://images.unsplash.com/photo-1678685888221-cda773a3dcdb",
+          "description": "Google's first foldable with seamless software and powerful cameras",
+          "rating": 4.5,
+          "comments": 876,
+          "price": 1799.99,
+          "discount": 8,
+          "colors": ["Obsidian", "Porcelain"],
+          "sizes": ["256GB", "512GB"]
+        },
+        {
+          "id": "phone-google-005",
+          "name": "Google Pixel 7",
+          "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+          "description": "Previous generation flagship with excellent value and camera quality",
+          "rating": 4.5,
+          "comments": 5678,
+          "price": 599.99,
+          "discount": 20,
+          "colors": ["Obsidian", "Snow", "Lemongrass"],
+          "sizes": ["128GB", "256GB"]
+        }
+      ]
+    }
+  ]
+},
+    {
+      "id": "computers",
+      "name": "Computers",
+      "brands": [
+        {
+          "name": "Dell",
+          "products": [
+            {
+              "id": "comp-dell-001",
+              "name": "Dell XPS 15 Laptop",
+              "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45",
+              "description": "Powerful 15-inch laptop with Intel i7 processor, 16GB RAM, and stunning 4K display for professionals",
+              "rating": 4.7,
+              "comments": 342,
+              "price": 1599.99,
+              "discount": 15,
+              "colors": ["Silver", "Black"],
+              "sizes": ["15-inch", "17-inch"]
+            },
+            {
+              "id": "comp-dell-002",
+              "name": "Dell Inspiron Desktop",
+              "image": "https://images.unsplash.com/photo-1587202372634-32705e3bf49c",
+              "description": "Reliable desktop computer with AMD Ryzen 5, 12GB RAM, perfect for home and office use",
+              "rating": 4.3,
+              "comments": 198,
+              "price": 799.99,
+              "discount": 10,
+              "colors": ["Black", "White"],
+              "sizes": ["Mini Tower", "Full Tower"]
+            },
+            {
+              "id": "comp-dell-003",
+              "name": "Dell UltraSharp Monitor 27",
+              "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf",
+              "description": "27-inch QHD monitor with IPS technology, perfect color accuracy for creative professionals",
+              "rating": 4.8,
+              "comments": 456,
+              "price": 449.99,
+              "discount": 20,
+              "colors": ["Black"],
+              "sizes": ["27-inch", "32-inch"]
+            },
+            {
+              "id": "comp-dell-004",
+              "name": "Dell Latitude Business Laptop",
+              "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+              "description": "Enterprise-grade laptop with enhanced security features and long battery life",
+              "rating": 4.5,
+              "comments": 267,
+              "price": 1299.99,
+              "discount": 12,
+              "colors": ["Black", "Gray"],
+              "sizes": ["14-inch", "15-inch"]
+            },
+            {
+              "id": "comp-dell-005",
+              "name": "Dell Gaming Keyboard",
+              "image": "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae",
+              "description": "Mechanical RGB keyboard with customizable backlighting and programmable keys",
+              "rating": 4.6,
+              "comments": 523,
+              "price": 129.99,
+              "discount": 25,
+              "colors": ["Black", "White"],
+              "sizes": ["Full Size", "Compact"]
+            }
+          ]
+        },
+        {
+          "name": "HP",
+          "products": [
+            {
+              "id": "comp-hp-001",
+              "name": "HP Pavilion Gaming Laptop",
+              "image": "https://images.unsplash.com/photo-1603302576837-37561b2e2302",
+              "description": "Gaming laptop with NVIDIA RTX graphics, 144Hz display, and advanced cooling system",
+              "rating": 4.6,
+              "comments": 412,
+              "price": 1399.99,
+              "discount": 18,
+              "colors": ["Black", "Green"],
+              "sizes": ["15.6-inch", "17.3-inch"]
+            },
+            {
+              "id": "comp-hp-002",
+              "name": "HP All-in-One Desktop",
+              "image": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
+              "description": "Sleek all-in-one PC with 23.8-inch touchscreen, Intel i5, and space-saving design",
+              "rating": 4.4,
+              "comments": 289,
+              "price": 899.99,
+              "discount": 15,
+              "colors": ["White", "Silver"],
+              "sizes": ["23.8-inch", "27-inch"]
+            },
+            {
+              "id": "comp-hp-003",
+              "name": "HP Wireless Mouse",
+              "image": "https://images.unsplash.com/photo-1527814050087-3793815479db",
+              "description": "Ergonomic wireless mouse with precision tracking and 18-month battery life",
+              "rating": 4.2,
+              "comments": 678,
+              "price": 29.99,
+              "discount": 30,
+              "colors": ["Black", "Silver", "Blue"],
+              "sizes": ["Standard", "Large"]
+            },
+            {
+              "id": "comp-hp-004",
+              "name": "HP Envy Laptop",
+              "image": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2",
+              "description": "Premium ultrabook with aluminum chassis, 13-inch FHD display, and exceptional battery life",
+              "rating": 4.7,
+              "comments": 356,
+              "price": 1099.99,
+              "discount": 10,
+              "colors": ["Silver", "Rose Gold"],
+              "sizes": ["13-inch", "15-inch"]
+            },
+            {
+              "id": "comp-hp-005",
+              "name": "HP USB-C Hub",
+              "image": "https://images.unsplash.com/photo-1625948515291-69613efd103f",
+              "description": "Multi-port USB-C hub with HDMI, USB 3.0, SD card reader, and power delivery",
+              "rating": 4.3,
+              "comments": 445,
+              "price": 49.99,
+              "discount": 20,
+              "colors": ["Space Gray", "Silver"],
+              "sizes": ["Compact", "Extended"]
+            }
+          ]
+        },
+        {
+          "name": "Lenovo",
+          "products": [
+            {
+              "id": "comp-len-001",
+              "name": "Lenovo ThinkPad X1 Carbon",
+              "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed",
+              "description": "Ultra-lightweight business laptop with military-grade durability and 16-hour battery",
+              "rating": 4.9,
+              "comments": 512,
+              "price": 1799.99,
+              "discount": 8,
+              "colors": ["Black"],
+              "sizes": ["14-inch"]
+            },
+            {
+              "id": "comp-len-002",
+              "name": "Lenovo IdeaPad Gaming",
+              "image": "https://images.unsplash.com/photo-1593640408182-31c70c8268f5",
+              "description": "Affordable gaming laptop with AMD Ryzen 7, GTX graphics, and efficient thermal design",
+              "rating": 4.5,
+              "comments": 387,
+              "price": 999.99,
+              "discount": 22,
+              "colors": ["Shadow Black", "Cloud Grey"],
+              "sizes": ["15.6-inch", "17-inch"]
+            },
+            {
+              "id": "comp-len-003",
+              "name": "Lenovo Smart Tab",
+              "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0",
+              "description": "Versatile tablet with detachable keyboard, perfect for work and entertainment",
+              "rating": 4.4,
+              "comments": 234,
+              "price": 399.99,
+              "discount": 15,
+              "colors": ["Iron Gray", "Platinum"],
+              "sizes": ["10.1-inch", "11-inch"]
+            },
+            {
+              "id": "comp-len-004",
+              "name": "Lenovo Legion Tower",
+              "image": "https://images.unsplash.com/photo-1591488320449-011701bb6704",
+              "description": "High-performance gaming desktop with liquid cooling and RGB lighting",
+              "rating": 4.7,
+              "comments": 298,
+              "price": 1899.99,
+              "discount": 12,
+              "colors": ["Black", "White"],
+              "sizes": ["Mid Tower", "Full Tower"]
+            },
+            {
+              "id": "comp-len-005",
+              "name": "Lenovo Wireless Webcam",
+              "image": "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8",
+              "description": "1080p HD webcam with auto-focus, noise-canceling mic, and privacy shutter",
+              "rating": 4.3,
+              "comments": 567,
+              "price": 79.99,
+              "discount": 25,
+              "colors": ["Black", "White"],
+              "sizes": ["Standard"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "smartwatches",
+      "name": "Smart Watches",
+      "brands": [
+        {
+          "name": "Apple",
+          "products": [
+            {
+              "id": "watch-apple-001",
+              "name": "Apple Watch Series 9",
+              "image": "https://images.unsplash.com/photo-1434493907317-a46b5bbe7834",
+              "description": "Advanced smartwatch with ECG, blood oxygen monitoring, and always-on Retina display",
+              "rating": 4.9,
+              "comments": 1234,
+              "price": 429.99,
+              "discount": 10,
+              "colors": ["Midnight", "Starlight", "Silver"],
+              "sizes": ["41mm", "45mm"]
+            },
+            {
+              "id": "watch-apple-002",
+              "name": "Apple Watch SE",
+              "image": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a",
+              "description": "Essential smartwatch features at an affordable price with fall detection",
+              "rating": 4.6,
+              "comments": 892,
+              "price": 279.99,
+              "discount": 15,
+              "colors": ["Silver", "Midnight", "Starlight"],
+              "sizes": ["40mm", "44mm"]
+            },
+            {
+              "id": "watch-apple-003",
+              "name": "Apple Watch Ultra",
+              "image": "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1",
+              "description": "Rugged smartwatch for extreme sports with precision GPS and 36-hour battery",
+              "rating": 4.8,
+              "comments": 567,
+              "price": 799.99,
+              "discount": 5,
+              "colors": ["Titanium"],
+              "sizes": ["49mm"]
+            },
+            {
+              "id": "watch-apple-004",
+              "name": "Apple Watch Sport Band",
+              "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+              "description": "High-performance fluoroelastomer sport band, sweat and water resistant",
+              "rating": 4.7,
+              "comments": 2341,
+              "price": 49.99,
+              "discount": 20,
+              "colors": ["Black", "White", "Pink", "Blue"],
+              "sizes": ["S/M", "M/L"]
+            },
+            {
+              "id": "watch-apple-005",
+              "name": "Apple Watch Magnetic Charger",
+              "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f",
+              "description": "Fast wireless charger with magnetic alignment for Apple Watch",
+              "rating": 4.5,
+              "comments": 1456,
+              "price": 29.99,
+              "discount": 0,
+              "colors": ["White"],
+              "sizes": ["Standard"]
+            }
+          ]
+        },
+        {
+          "name": "Samsung",
+          "products": [
+            {
+              "id": "watch-sam-001",
+              "name": "Samsung Galaxy Watch 6",
+              "image": "https://images.unsplash.com/photo-1617625802912-cde586faf331",
+              "description": "Advanced health tracking with body composition analysis and sleep coaching",
+              "rating": 4.6,
+              "comments": 876,
+              "price": 349.99,
+              "discount": 18,
+              "colors": ["Graphite", "Silver", "Gold"],
+              "sizes": ["40mm", "44mm"]
+            },
+            {
+              "id": "watch-sam-002",
+              "name": "Samsung Galaxy Watch 6 Classic",
+              "image": "https://images.unsplash.com/photo-1546868871-7041f2a55e12",
+              "description": "Premium smartwatch with rotating bezel and sapphire crystal display",
+              "rating": 4.7,
+              "comments": 654,
+              "price": 429.99,
+              "discount": 12,
+              "colors": ["Black", "Silver"],
+              "sizes": ["43mm", "47mm"]
+            },
+            {
+              "id": "watch-sam-003",
+              "name": "Samsung Galaxy Fit 3",
+              "image": "https://images.unsplash.com/photo-1557438159-51eec7a6c9e8",
+              "description": "Sleek fitness tracker with continuous heart rate monitoring and 21-day battery",
+              "rating": 4.4,
+              "comments": 432,
+              "price": 99.99,
+              "discount": 25,
+              "colors": ["Black", "Pink", "Silver"],
+              "sizes": ["One Size"]
+            },
+            {
+              "id": "watch-sam-004",
+              "name": "Samsung Sport Strap",
+              "image": "https://images.unsplash.com/photo-1609081219090-a6d81d3085bf",
+              "description": "Breathable sport strap with secure magnetic closure",
+              "rating": 4.3,
+              "comments": 567,
+              "price": 39.99,
+              "discount": 15,
+              "colors": ["Black", "Navy", "Green"],
+              "sizes": ["S/M", "L/XL"]
+            },
+            {
+              "id": "watch-sam-005",
+              "name": "Samsung Wireless Charger Duo",
+              "image": "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8",
+              "description": "Charge your watch and phone simultaneously with fast wireless charging",
+              "rating": 4.5,
+              "comments": 789,
+              "price": 69.99,
+              "discount": 20,
+              "colors": ["Black", "White"],
+              "sizes": ["Standard"]
+            }
+          ]
+        },
+        {
+          "name": "Garmin",
+          "products": [
+            {
+              "id": "watch-gar-001",
+              "name": "Garmin Fenix 7",
+              "image": "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1",
+              "description": "Multisport GPS watch with solar charging and advanced training metrics",
+              "rating": 4.8,
+              "comments": 456,
+              "price": 699.99,
+              "discount": 10,
+              "colors": ["Slate Gray", "Black"],
+              "sizes": ["42mm", "47mm", "51mm"]
+            },
+            {
+              "id": "watch-gar-002",
+              "name": "Garmin Venu 3",
+              "image": "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3",
+              "description": "Smart fitness watch with AMOLED display and comprehensive health monitoring",
+              "rating": 4.6,
+              "comments": 534,
+              "price": 449.99,
+              "discount": 15,
+              "colors": ["Ivory", "Black", "Slate"],
+              "sizes": ["41mm", "45mm"]
+            },
+            {
+              "id": "watch-gar-003",
+              "name": "Garmin Forerunner 265",
+              "image": "https://images.unsplash.com/photo-1557438159-51eec7a6c9e8",
+              "description": "GPS running watch with training readiness and race predictor",
+              "rating": 4.7,
+              "comments": 389,
+              "price": 479.99,
+              "discount": 12,
+              "colors": ["Black", "Aqua"],
+              "sizes": ["Standard"]
+            },
+            {
+              "id": "watch-gar-004",
+              "name": "Garmin Silicone Band",
+              "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+              "description": "Comfortable silicone band designed for all-day wear and intense workouts",
+              "rating": 4.4,
+              "comments": 678,
+              "price": 29.99,
+              "discount": 0,
+              "colors": ["Black", "Blue", "Red", "White"],
+              "sizes": ["20mm", "22mm", "26mm"]
+            },
+            {
+              "id": "watch-gar-005",
+              "name": "Garmin Charging Cable",
+              "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f",
+              "description": "Proprietary charging cable compatible with all Garmin watches",
+              "rating": 4.2,
+              "comments": 445,
+              "price": 19.99,
+              "discount": 10,
+              "colors": ["Black"],
+              "sizes": ["Standard"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mini-cameras",
+      "name": "Mini Cameras",
+      "brands": [
+        {
+          "name": "GoPro",
+          "products": [
+            {
+              "id": "cam-gopro-001",
+              "name": "GoPro HERO12 Black",
+              "image": "https://images.unsplash.com/photo-1519638399535-1b036603ac77",
+              "description": "Flagship action camera with 5.3K video, HyperSmooth stabilization, and waterproof design",
+              "rating": 4.8,
+              "comments": 1234,
+              "price": 449.99,
+              "discount": 15,
+              "colors": ["Black"],
+              "sizes": ["Standard"]
+            },
+            {
+              "id": "cam-gopro-002",
+              "name": "GoPro HERO11 Black Mini",
+              "image": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd",
+              "description": "Ultra-compact action cam perfect for mounting in tight spaces",
+              "rating": 4.6,
+              "comments": 678,
+              "price": 349.99,
+              "discount": 20,
+              "colors": ["Black"],
+              "sizes": ["Mini"]
+            },
+            {
+              "id": "cam-gopro-003",
+              "name": "GoPro Max 360 Camera",
+              "image": "https://images.unsplash.com/photo-1606986628892-698fa7d8e399",
+              "description": "360-degree camera with Max HyperSmooth and horizon leveling",
+              "rating": 4.5,
+              "comments": 432,
+              "price": 499.99,
+              "discount": 10,
+              "colors": ["Black"],
+              "sizes": ["Standard"]
+            },
+            {
+              "id": "cam-gopro-004",
+              "name": "GoPro Chest Mount Harness",
+              "image": "https://images.unsplash.com/photo-1593784991095-a205069470b6",
+              "description": "Fully adjustable chest harness for immersive POV footage",
+              "rating": 4.4,
+              "comments": 890,
+              "price": 39.99,
+              "discount": 25,
+              "colors": ["Black"],
+              "sizes": ["One Size"]
+            },
+            {
+              "id": "cam-gopro-005",
+              "name": "GoPro Dual Battery Charger",
+              "image": "https://images.unsplash.com/photo-1609017909785-5aa53c3ebb9a",
+              "description": "Charge two batteries simultaneously via USB for extended shooting",
+              "rating": 4.7,
+              "comments": 567,
+              "price": 49.99,
+              "discount": 15,
+              "colors": ["Black"],
+              "sizes": ["Standard"]
+            }
+          ]
+        },
+        {
+          "name": "DJI",
+          "products": [
+            {
+              "id": "cam-dji-001",
+              "name": "DJI Osmo Action 4",
+              "image": "https://images.unsplash.com/photo-1606322693644-c4a5e2a88e61",
+              "description": "4K action camera with dual touchscreens and magnetic quick-release mounting",
+              "rating": 4.7,
+              "comments": 987,
+              "price": 379.99,
+              "discount": 12,
+              "colors": ["Black"],
+              "sizes": ["Standard"]
+            },
+            {
+              "id": "cam-dji-002",
+              "name": "DJI Pocket 3",
+              "image": "https://images.unsplash.com/photo-1598327105666-5b89351aff97",
+              "description": "Compact gimbal camera with 3-axis stabilization for smooth handheld footage",
+              "rating": 4.8,
+              "comments": 1123,
+              "price": 599.99,
+              "discount": 8,
+              "colors": ["Black", "White"],
+              "sizes": ["Pocket"]
+            },
+            {
+              "id": "cam-dji-003",
+              "name": "DJI Action 2 Dual-Screen",
+              "image": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd",
+              "description": "Modular action camera system with magnetic mounting and front screen",
+              "rating": 4.5,
+              "comments": 456,
+              "price": 469.99,
+              "discount": 18,
+              "colors": ["Black"],
+              "sizes": ["Compact"]
+            },
+            {
+              "id": "cam-dji-004",
+              "name": "DJI Floating Handle",
+              "image": "https://images.unsplash.com/photo-1593784991095-a205069470b6",
+              "description": "Buoyant grip handle for water sports with bright orange color for visibility",
+              "rating": 4.3,
+              "comments": 234,
+              "price": 19.99,
+              "discount": 20,
+              "colors": ["Orange"],
+              "sizes": ["Standard"]
+            },
+            {
+              "id": "cam-dji-005",
+              "name": "DJI Mic Wireless System",
+              "image": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc",
+              "description": "Compact wireless microphone system with 250m range and noise cancellation",
+              "rating": 4.6,
+              "comments": 678,
+              "price": 329.99,
+              "discount": 10,
+              "colors": ["Black"],
+              "sizes": ["Compact"]
+            }
+          ]
+        },
+        {
+          "name": "Insta360",
+          "products": [
+            {
+              "id": "cam-insta-001",
+              "name": "Insta360 X3",
+              "image": "https://images.unsplash.com/photo-1606986628892-698fa7d8e399",
+              "description": "5.7K 360° camera with invisible selfie stick effect and AI-powered editing",
+              "rating": 4.7,
+              "comments": 543,
+              "price": 449.99,
+              "discount": 15,
+              "colors": ["Black"],
+              "sizes": ["Standard"]
+            },
+            {
+              "id": "cam-insta-002",
+              "name": "Insta360 GO 3",
+              "image": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd",
+              "description": "Tiny wearable camera weighing just 35g with magnetic mounting anywhere",
+              "rating": 4.6,
+              "comments": 789,
+              "price": 329.99,
+              "discount": 12,
+              "colors": ["White", "Black"],
+              "sizes": ["Micro"]
+            },
+            {
+              "id": "cam-insta-003",
+              "name": "Insta360 ONE RS Twin Edition",
+              "image": "https://images.unsplash.com/photo-1519638399535-1b036603ac77",
+              "description": "Modular action cam with swappable 4K wide-angle and 360° lenses",
+              "rating": 4.5,
+              "comments": 432,
+              "price": 549.99,
+              "discount": 20,
+              "colors": ["Black"],
+              "sizes": ["Modular"]
+            },
+            {
+              "id": "cam-insta-004",
+              "name": "Insta360 Extended Selfie Stick",
+              "image": "https://images.unsplash.com/photo-1558051815-0f18e64e6280",
+              "description": "Extends up to 3m for incredible aerial perspectives that disappear in 360° footage",
+              "rating": 4.4,
+              "comments": 345,
+              "price": 39.99,
+              "discount": 10,
+              "colors": ["Black"],
+              "sizes": ["3M"]
+            },
+            {
+              "id": "cam-insta-005",
+              "name": "Insta360 Quick Reader",
+              "image": "https://images.unsplash.com/photo-1609017909785-5aa53c3ebb9a",
+              "description": "High-speed USB-C and Lightning card reader for fast file transfers",
+              "rating": 4.3,
+              "comments": 456,
+              "price": 29.99,
+              "discount": 15,
+              "colors": ["Black"],
+              "sizes": ["Compact"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "headphones",
+      "name": "Headphones",
+      "brands": [
+        {
+          "name": "Sony",
+          "products": [
+            {
+              "id": "head-sony-001",
+              "name": "Sony WH-1000XM5",
+              "image": "https://images.unsplash.com/photo-1546435770-a3e426bf472b",
+              "description": "Industry-leading noise cancellation with exceptional sound quality and 30-hour battery",
+              "rating": 4.9,
+              "comments": 2341,
+              "price": 399.99,
+              "discount": 15,
+              "colors": ["Black", "Silver"],
+              "sizes": ["Over-Ear"]
+            },
+            {
+              "id": "head-sony-002",
+              "name": "Sony WF-1000XM5 Earbuds",
+              "image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df",
+              "description": "Premium true wireless earbuds with AI noise cancellation and LDAC support",
+              "rating": 4.7,
+              "comments": 1876,
+              "price": 299.99,
+              "discount": 12,
+              "colors": ["Black", "Silver"],
+              "sizes": ["In-Ear"]
+            },
+            {
+              "id": "head-sony-003",
+              "name": "Sony WH-CH720N",
+              "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+              "description": "Lightweight wireless headphones with noise cancellation and 35-hour battery life",
+              "rating": 4.5,
+              "comments": 987,
+              "price": 149.99,
+              "discount": 20,
+              "colors": ["Black", "White", "Blue"],
+              "sizes": ["Over-Ear"]
+            },
+            {
+              "id": "head-sony-004",
+              "name": "Sony LinkBuds S",
+              "image": "https://images.unsplash.com/photo-1598327105666-5b89351aff97",
+              "description": "Ultra-lightweight earbuds designed for all-day comfort and ambient sound",
+              "rating": 4.4,
+              "comments": 654,
+              "price": 199.99,
+              "discount": 18,
+              "colors": ["Black", "White", "Earth Blue"],
+              "sizes": ["In-Ear"]
+            },
+            {
+              "id": "head-sony-005",
+              "name": "Sony Carrying Case",
+              "image": "https://images.unsplash.com/photo-1585227291231-38807a91abb8",
+              "description": "Premium hardshell case with cable storage for Sony headphones",
+              "rating": 4.6,
+              "comments": 432,
+              "price": 39.99,
+              "discount": 10,
+              "colors": ["Black", "Gray"],
+              "sizes": ["Standard"]
+            }
+          ]
+        },
+        {
+          "name": "Bose",
+          "products": [
+            {
+              "id": "head-bose-001",
+              "name": "Bose QuietComfort Ultra",
+              "image": "https://images.unsplash.com/photo-1487215078519-e21cc028cb29",
+              "description": "Premium headphones with spatial audio and world-class noise cancellation",
+              "rating": 4.8,
+              "comments": 1567,
+              "price": 429.99,
+              "discount": 10,
+              "colors": ["Black", "White Smoke"],
+              "sizes": ["Over-Ear"]
+            },
+            {
+              "id": "head-bose-002",
+              "name": "Bose QuietComfort Earbuds II",
+              "image": "https://images.unsplash.com/photo-1606841837239-c5a1a4a07af7",
+              "description": "Personalized noise cancellation with CustomTune technology for perfect fit",
+              "rating": 4.7,
+              "comments": 1234,
+              "price": 299.99,
+              "discount": 15,
+              "colors": ["Black", "Triple Black"],
+              "sizes": ["In-Ear"]
+            },
+            {
+              "id": "head-bose-003",
+              "name": "Bose Sport Earbuds",
+              "image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df",
+              "description": "Secure-fit wireless earbuds designed for workouts with IPX4 water resistance",
+              "rating": 4.5,
+              "comments": 876,
+              "price": 179.99,
+              "discount": 20,
+              "colors": ["Black", "Baltic Blue"],
+              "sizes": ["In-Ear"]
+            },
+            {
+              "id": "head-bose-004",
+              "name": "Bose 700 Headphones",
+              "image": "https://images.unsplash.com/photo-1484704849700-f032a568e944",
+              "description": "Elegant design with 11 levels of noise cancellation and touch controls",
+              "rating": 4.6,
+              "comments": 1098,
+              "price": 379.99,
+              "discount": 12,
+              "colors": ["Black", "Silver", "Soapstone"],
+              "sizes": ["Over-Ear"]
+            },
+            {
+              "id": "head-bose-005",
+              "name": "Bose Replacement Ear Cushions",
+              "image": "https://images.unsplash.com/photo-1622290319920-f2e92895be46",
+              "description": "Premium protein leather replacement cushions for ultimate comfort",
+              "rating": 4.4,
+              "comments": 345,
+              "price": 49.99,
+              "discount": 0,
+              "colors": ["Black"],
+              "sizes": ["Standard"]
+            }
+          ]
+        },
+        {
+          "name": "Sennheiser",
+          "products": [
+            {
+              "id": "head-senn-001",
+              "name": "Sennheiser Momentum 4",
+              "image": "https://images.unsplash.com/photo-1545127398-14699f92334b",
+              "description": "Audiophile-grade wireless headphones with 60-hour battery and adaptive ANC",
+              "rating": 4.8,
+              "comments": 789,
+              "price": 379.99,
+              "discount": 18,
+              "colors": ["Black", "White"],
+              "sizes": ["Over-Ear"]
+            },
+            {
+              "id": "head-senn-002",
+              "name": "Sennheiser HD 660S2",
+              "image": "https://images.unsplash.com/photo-1558756520-22cfe5d382ca",
+              "description": "Open-back audiophile headphones with reference-quality sound",
+              "rating": 4.9,
+              "comments": 432,
+              "price": 599.99,
+              "discount": 10,
+              "colors": ["Black"],
+              "sizes": ["Over-Ear"]
+            },
+            {
+              "id": "head-senn-003",
+              "name": "Sennheiser CX Plus",
+              "image": "https://images.unsplash.com/photo-1606841837239-c5a1a4a07af7",
+              "description": "True wireless earbuds with active noise cancellation and customizable sound",
+              "rating": 4.5,
+              "comments": 567,
+              "price": 179.99,
+              "discount": 25,
+              "colors": ["Black", "White"],
+              "sizes": ["In-Ear"]
+            },
+            {
+              "id": "head-senn-004",
+              "name": "Sennheiser HD 450BT",
+              "image": "https://images.unsplash.com/photo-1487215078519-e21cc028cb29",
+              "description": "Wireless headphones with active noise cancellation and deep bass response",
+              "rating": 4.4,
+              "comments": 654,
+              "price": 149.99,
+              "discount": 15,
+              "colors": ["Black", "White"],
+              "sizes": ["Over-Ear"]
+            },
+            {
+              "id": "head-senn-005",
+              "name": "Sennheiser Cable 2.5mm",
+              "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f",
+              "description": "Balanced audio cable with gold-plated connectors for HD series",
+              "rating": 4.3,
+              "comments": 234,
+              "price": 29.99,
+              "discount": 10,
+              "colors": ["Black"],
+              "sizes": ["1.2m"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "printers",
+      "name": "Printers",
+      "brands": [
+        {
+          "name": "HP",
+          "products": [
+            {
+              "id": "print-hp-001",
+              "name": "HP OfficeJet Pro 9025e",
+              "image": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6",
+              "description": "All-in-one color printer with wireless printing and automatic document feeder",
+              "rating": 4.5,
+              "comments": 1234,
+              "price": 329.99,
+              "discount": 20,
+              "colors": ["White", "Black"],
+              "sizes": ["Medium", "Large"]
+            },
+            {
+              "id": "print-hp-002",
+              "name": "HP LaserJet Pro M404dn",
+              "image": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6",
+              "description": "Fast monochrome laser printer with automatic duplex printing",
+              "rating": 4.6,
+              "comments": 876,
+              "price": 279.99,
+              "discount": 15,
+              "colors": ["White"],
+              "sizes": ["Standard"]
+            },
+            {
+              "id": "print-hp-003",
+              "name": "HP Envy Inspire 7955e",
+              "image": "https://images.unsplash.com/photo-1585399000684-d2f72660f092",
+              "description": "Photo printer with borderless printing and mobile app connectivity",
+              "rating": 4.4,
+              "comments": 567,
+              "price": 229.99,
+              "discount": 25,
+              "colors": ["White", "Gray"],
+              "sizes": ["Compact"]
+            },
+            {
+              "id": "print-hp-004",
+              "name": "HP Smart Tank 7301",
+              "image": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6",
+              "description": "Refillable ink tank printer with up to 2 years of ink included",
+              "rating": 4.7,
+              "comments": 432,
+              "price": 399.99,
+              "discount": 10,
+              "colors": ["White"],
+              "sizes": ["Medium"]
+            },
+            {
+              "id": "print-hp-005",
+              "name": "HP 67 Ink Cartridge Combo",
+              "image": "https://images.unsplash.com/photo-1563210315-f3d0dce78e47",
+              "description": "Black and tri-color ink cartridge pack for HP printers",
+              "rating": 4.3,
+              "comments": 1567,
+              "price": 49.99,
+              "discount": 15,
+              "colors": ["Multi"],
+              "sizes": ["Standard"]
+            }
+          ]
+        },
+        {
+          "name": "Canon",
+          "products": [
+            {
+              "id": "print-canon-001",
+              "name": "Canon PIXMA TR8620a",
+              "image": "https://images.unsplash.com/photo-1585399000684-d2f72660f092",
+              "description": "Versatile all-in-one printer with 5-ink system for vibrant colors",
+              "rating": 4.6,
+              "comments": 987,
+              "price": 299.99,
+              "discount": 18,
+              "colors": ["Black", "White"],
+              "sizes": ["Medium"]
+            },
+            {
+              "id": "print-canon-002",
+              "name": "Canon imageCLASS MF445dw",
+              "image": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6",
+              "description": "Monochrome laser multifunction printer with scan-to-cloud capability",
+              "rating": 4.7,
+              "comments": 654,
+              "price": 349.99,
+              "discount": 12,
+              "colors": ["White"],
+              "sizes": ["Standard"]
+            },
+            {
+              "id": "print-canon-003",
+              "name": "Canon SELPHY CP1500",
+              "image": "https://images.unsplash.com/photo-1570006922014-6c068d4fa6f5",
+              "description": "Compact wireless photo printer for instant 4x6 prints",
+              "rating": 4.5,
+              "comments": 432,
+              "price": 149.99,
+              "discount": 20,
+              "colors": ["Black", "White", "Pink"],
+              "sizes": ["Portable"]
+            },
+            {
+              "id": "print-canon-004",
+              "name": "Canon MAXIFY GX7021",
+              "image": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6",
+              "description": "MegaTank printer with high-capacity ink tanks for business",
+              "rating": 4.6,
+              "comments": 345,
+              "price": 449.99,
+              "discount": 15,
+              "colors": ["Black"],
+              "sizes": ["Large"]
+            },
+            {
+              "id": "print-canon-005",
+              "name": "Canon Photo Paper Plus Glossy",
+              "image": "https://images.unsplash.com/photo-1585399000684-d2f72660f092",
+              "description": "Professional glossy photo paper for stunning prints, 50 sheets",
+              "rating": 4.4,
+              "comments": 789,
+              "price": 19.99,
+              "discount": 10,
+              "colors": ["White"],
+              "sizes": ["4x6", "8.5x11"]
+            }
+          ]
+        },
+        {
+          "name": "Epson",
+          "products": [
+            {
+              "id": "print-epson-001",
+              "name": "Epson EcoTank ET-4850",
+              "image": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6",
+              "description": "Cartridge-free all-in-one with supersized ink tanks for 2 years",
+              "rating": 4.7,
+              "comments": 1123,
+              "price": 499.99,
+              "discount": 12,
+              "colors": ["Black"],
+              "sizes": ["Medium"]
+            },
+            {
+              "id": "print-epson-002",
+              "name": "Epson WorkForce Pro WF-4830",
+              "image": "https://images.unsplash.com/photo-1585399000684-d2f72660f092",
+              "description": "Fast color inkjet with PrecisionCore technology and auto 2-sided printing",
+              "rating": 4.5,
+              "comments": 876,
+              "price": 329.99,
+              "discount": 18,
+              "colors": ["White"],
+              "sizes": ["Standard"]
+            },
+            {
+              "id": "print-epson-003",
+              "name": "Epson Expression Photo HD XP-15000",
+              "image": "https://images.unsplash.com/photo-1570006922014-6c068d4fa6f5",
+              "description": "Wide-format photo printer with 6-color Claria HD ink",
+              "rating": 4.8,
+              "comments": 432,
+              "price": 749.99,
+              "discount": 10,
+              "colors": ["Black"],
+              "sizes": ["Wide"]
+            },
+            {
+              "id": "print-epson-004",
+              "name": "Epson EcoTank L3250",
+              "image": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6",
+              "description": "Compact all-in-one with integrated ink tank system",
+              "rating": 4.4,
+              "comments": 567,
+              "price": 249.99,
+              "discount": 20,
+              "colors": ["White"],
+              "sizes": ["Compact"]
+            },
+            {
+              "id": "print-epson-005",
+              "name": "Epson 522 Ink Bottle Set",
+              "image": "https://images.unsplash.com/photo-1563210315-f3d0dce78e47",
+              "description": "4-color ink bottle set for EcoTank printers, high-yield",
+              "rating": 4.6,
+              "comments": 1234,
+              "price": 59.99,
+              "discount": 15,
+              "colors": ["CMYK"],
+              "sizes": ["Standard"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "multimedia",
+      "name": "Multimedia",
+      "brands": [
+        {
+          "name": "Logitech",
+          "products": [
+            {
+              "id": "multi-logi-001",
+              "name": "Logitech Brio 4K Webcam",
+              "image": "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8",
+              "description": "Ultra HD webcam with HDR and Windows Hello support for professional streaming",
+              "rating": 4.6,
+              "comments": 1876,
+              "price": 199.99,
+              "discount": 15,
+              "colors": ["Black"],
+              "sizes": ["Standard"]
+            },
+            {
+              "id": "multi-logi-002",
+              "name": "Logitech Z906 5.1 Speakers",
+              "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1",
+              "description": "THX-certified surround sound speaker system with 500W peak power",
+              "rating": 4.7,
+              "comments": 1234,
+              "price": 349.99,
+              "discount": 20,
+              "colors": ["Black"],
+              "sizes": ["5.1 System"]
+            },
+            {
+              "id": "multi-logi-003",
+              "name": "Logitech StreamCam",
+              "image": "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8",
+              "description": "Full HD webcam with AI-powered framing and vertical video support",
+              "rating": 4.5,
+              "comments": 876,
+              "price": 169.99,
+              "discount": 18,
+              "colors": ["White", "Graphite"],
+              "sizes": ["Compact"]
+            },
+            {
+              "id": "multi-logi-004",
+              "name": "Logitech G560 RGB Speakers",
+              "image": "https://images.unsplash.com/photo-1545220178-3a1e4d1e8aa8",
+              "description": "Gaming speakers with screen-reactive LIGHTSYNC RGB lighting",
+              "rating": 4.4,
+              "comments": 543,
+              "price": 229.99,
+              "discount": 25,
+              "colors": ["Black"],
+              "sizes": ["2.1 System"]
+            },
+            {
+              "id": "multi-logi-005",
+              "name": "Logitech Blue Yeti USB Mic",
+              "image": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc",
+              "description": "Professional USB condenser microphone with multiple pickup patterns",
+              "rating": 4.8,
+              "comments": 2341,
+              "price": 129.99,
+              "discount": 12,
+              "colors": ["Black", "Blue", "Silver"],
+              "sizes": ["Standard"]
+            }
+          ]
+        },
+        {
+          "name": "JBL",
+          "products": [
+            {
+              "id": "multi-jbl-001",
+              "name": "JBL Quantum One Gaming Headset",
+              "image": "https://images.unsplash.com/photo-1599669454699-248893623440",
+              "description": "Pro gaming headset with head tracking and spatial audio",
+              "rating": 4.6,
+              "comments": 987,
+              "price": 299.99,
+              "discount": 15,
+              "colors": ["Black"],
+              "sizes": ["Over-Ear"]
+            },
+            {
+              "id": "multi-jbl-002",
+              "name": "JBL Flip 6 Bluetooth Speaker",
+              "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1",
+              "description": "Portable waterproof speaker with powerful JBL Original Pro Sound",
+              "rating": 4.7,
+              "comments": 1567,
+              "price": 129.99,
+              "discount": 20,
+              "colors": ["Black", "Blue", "Red", "Gray"],
+              "sizes": ["Portable"]
+            },
+            {
+              "id": "multi-jbl-003",
+              "name": "JBL Bar 5.1 Soundbar",
+              "image": "https://images.unsplash.com/photo-1545220178-3a1e4d1e8aa8",
+              "description": "Wireless soundbar with detachable surround speakers and 10\" subwoofer",
+              "rating": 4.5,
+              "comments": 654,
+              "price": 599.99,
+              "discount": 18,
+              "colors": ["Black"],
+              "sizes": ["5.1 System"]
+            },
+            {
+              "id": "multi-jbl-004",
+              "name": "JBL Charge 5 Portable Speaker",
+              "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1",
+              "description": "Waterproof speaker with built-in powerbank and 20-hour playtime",
+              "rating": 4.8,
+              "comments": 2134,
+              "price": 179.99,
+              "discount": 12,
+              "colors": ["Black", "Blue", "Green", "Teal"],
+              "sizes": ["Medium"]
+            },
+            {
+              "id": "multi-jbl-005",
+              "name": "JBL Quantum 400 Headset",
+              "image": "https://images.unsplash.com/photo-1599669454699-248893623440",
+              "description": "Gaming headset with surround sound and detachable boom mic",
+              "rating": 4.4,
+              "comments": 432,
+              "price": 99.99,
+              "discount": 25,
+              "colors": ["Black"],
+              "sizes": ["Over-Ear"]
+            }
+          ]
+        },
+        {
+          "name": "Razer",
+          "products": [
+            {
+              "id": "multi-razer-001",
+              "name": "Razer Kiyo Pro Webcam",
+              "image": "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8",
+              "description": "Professional webcam with adaptive light sensor for optimal image quality",
+              "rating": 4.5,
+              "comments": 876,
+              "price": 199.99,
+              "discount": 10,
+              "colors": ["Black"],
+              "sizes": ["Standard"]
+            },
+            {
+              "id": "multi-razer-002",
+              "name": "Razer Seiren V3 Chroma",
+              "image": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc",
+              "description": "USB condenser mic with Chroma RGB lighting and tap-to-mute sensor",
+              "rating": 4.6,
+              "comments": 654,
+              "price": 149.99,
+              "discount": 15,
+              "colors": ["Black"],
+              "sizes": ["Standard"]
+            },
+            {
+              "id": "multi-razer-003",
+              "name": "Razer Leviathan V2",
+              "image": "https://images.unsplash.com/photo-1545220178-3a1e4d1e8aa8",
+              "description": "PC gaming soundbar with THX Spatial Audio and Razer Chroma RGB",
+              "rating": 4.7,
+              "comments": 432,
+              "price": 249.99,
+              "discount": 20,
+              "colors": ["Black"],
+              "sizes": ["Soundbar"]
+            },
+            {
+              "id": "multi-razer-004",
+              "name": "Razer Nommo Chroma Speakers",
+              "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1",
+              "description": "Full-range 2.0 gaming speakers with custom woven glass fiber drivers",
+              "rating": 4.4,
+              "comments": 345,
+              "price": 179.99,
+              "discount": 18,
+              "colors": ["Black"],
+              "sizes": ["2.0 System"]
+            },
+            {
+              "id": "multi-razer-005",
+              "name": "Razer Ring Light",
+              "image": "https://images.unsplash.com/photo-1617620835859-4e3765ce8da3",
+              "description": "12-inch ring light with adjustable color temperature for streaming",
+              "rating": 4.3,
+              "comments": 234,
+              "price": 99.99,
+              "discount": 15,
+              "colors": ["Black"],
+              "sizes": ["12-inch"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "accessories",
+      "name": "Accessories",
+      "brands": [
+        {
+          "name": "Anker",
+          "products": [
+            {
+              "id": "acc-anker-001",
+              "name": "Anker PowerCore 20000mAh",
+              "image": "https://images.unsplash.com/photo-1609081219090-a6d81d3085bf",
+              "description": "High-capacity portable charger with dual USB ports and fast charging",
+              "rating": 4.7,
+              "comments": 3456,
+              "price": 49.99,
+              "discount": 20,
+              "colors": ["Black", "White"],
+              "sizes": ["20000mAh", "26800mAh"]
+            },
+            {
+              "id": "acc-anker-002",
+              "name": "Anker USB-C Cable 6ft",
+              "image": "https://images.unsplash.com/photo-1625948515291-69613efd103f",
+              "description": "Durable braided USB-C cable with 60W power delivery support",
+              "rating": 4.8,
+              "comments": 5678,
+              "price": 15.99,
+              "discount": 25,
+              "colors": ["Black", "Red"],
+              "sizes": ["3ft", "6ft", "10ft"]
+            },
+            {
+              "id": "acc-anker-003",
+              "name": "Anker 737 Power Bank",
+              "image": "https://images.unsplash.com/photo-1609081219090-a6d81d3085bf",
+              "description": "24000mAh laptop power bank with 140W charging for MacBook Pro",
+              "rating": 4.6,
+              "comments": 987,
+              "price": 149.99,
+              "discount": 15,
+              "colors": ["Black"],
+              "sizes": ["24000mAh"]
+            },
+            {
+              "id": "acc-anker-004",
+              "name": "Anker 747 Charger",
+              "image": "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8",
+              "description": "150W 4-port GaN charger for multiple devices simultaneously",
+              "rating": 4.7,
+              "comments": 1234,
+              "price": 109.99,
+              "discount": 10,
+              "colors": ["Black", "White"],
+              "sizes": ["4-Port"]
+            },
+            {
+              "id": "acc-anker-005",
+              "name": "Anker Magnetic Wireless Charger",
+              "image": "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8",
+              "description": "15W MagSafe-compatible charger for iPhone with foldable design",
+              "rating": 4.5,
+              "comments": 876,
+              "price": 39.99,
+              "discount": 20,
+              "colors": ["Black", "White"],
+              "sizes": ["Standard"]
+            }
+          ]
+        },
+        {
+          "name": "Belkin",
+          "products": [
+            {
+              "id": "acc-belkin-001",
+              "name": "Belkin Boost Charge Stand",
+              "image": "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8",
+              "description": "3-in-1 wireless charger for iPhone, Apple Watch, and AirPods",
+              "rating": 4.6,
+              "comments": 1456,
+              "price": 149.99,
+              "discount": 15,
+              "colors": ["Black", "White"],
+              "sizes": ["3-in-1"]
+            },
+            {
+              "id": "acc-belkin-002",
+              "name": "Belkin USB-C Hub 7-in-1",
+              "image": "https://images.unsplash.com/photo-1625948515291-69613efd103f",
+              "description": "Multiport adapter with HDMI, USB-A, SD card, and 100W passthrough",
+              "rating": 4.5,
+              "comments": 876,
+              "price": 79.99,
+              "discount": 18,
+              "colors": ["Space Gray", "Silver"],
+              "sizes": ["7-Port"]
+            },
+            {
+              "id": "acc-belkin-003",
+              "name": "Belkin Screen Protector",
+              "image": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb",
+              "description": "Tempered glass screen protector with easy alignment tray",
+              "rating": 4.7,
+              "comments": 2341,
+              "price": 34.99,
+              "discount": 20,
+              "colors": ["Clear"],
+              "sizes": ["iPhone 15", "iPhone 15 Pro", "iPhone 15 Pro Max"]
+            },
+            {
+              "id": "acc-belkin-004",
+              "name": "Belkin Lightning to USB-C",
+              "image": "https://images.unsplash.com/photo-1625948515291-69613efd103f",
+              "description": "MFi-certified charging cable with reinforced connectors",
+              "rating": 4.4,
+              "comments": 1987,
+              "price": 24.99,
+              "discount": 10,
+              "colors": ["White", "Black"],
+              "sizes": ["1m", "2m"]
+            },
+            {
+              "id": "acc-belkin-005",
+              "name": "Belkin Power Bank 10K",
+              "image": "https://images.unsplash.com/photo-1609081219090-a6d81d3085bf",
+              "description": "Slim 10000mAh portable charger with USB-C and USB-A ports",
+              "rating": 4.5,
+              "comments": 765,
+              "price": 39.99,
+              "discount": 25,
+              "colors": ["Black", "White", "Pink"],
+              "sizes": ["10000mAh"]
+            }
+          ]
+        },
+        {
+          "name": "Spigen",
+          "products": [
+            {
+              "id": "acc-spigen-001",
+              "name": "Spigen Tough Armor Case",
+              "image": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb",
+              "description": "Heavy-duty dual-layer case with Air Cushion technology",
+              "rating": 4.8,
+              "comments": 4567,
+              "price": 29.99,
+              "discount": 15,
+              "colors": ["Black", "Gunmetal"],
+              "sizes": ["iPhone 15", "iPhone 15 Pro", "iPhone 15 Pro Max"]
+            },
+            {
+              "id": "acc-spigen-002",
+              "name": "Spigen Liquid Air Case",
+              "image": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb",
+              "description": "Slim flexible TPU case with geometric pattern grip",
+              "rating": 4.7,
+              "comments": 3456,
+              "price": 19.99,
+              "discount": 20,
+              "colors": ["Matte Black"],
+              "sizes": ["iPhone 15", "Samsung S24", "Pixel 8"]
+            },
+            {
+              "id": "acc-spigen-003",
+              "name": "Spigen GaN Charger 65W",
+              "image": "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8",
+              "description": "Compact 3-port GaN charger for laptops and mobile devices",
+              "rating": 4.6,
+              "comments": 876,
+              "price": 54.99,
+              "discount": 18,
+              "colors": ["Black", "White"],
+              "sizes": ["3-Port"]
+            },
+            {
+              "id": "acc-spigen-004",
+              "name": "Spigen Car Mount Pro",
+              "image": "https://images.unsplash.com/photo-1593784991095-a205069470b6",
+              "description": "Universal magnetic car mount with 360-degree rotation",
+              "rating": 4.5,
+              "comments": 1234,
+              "price": 24.99,
+              "discount": 25,
+              "colors": ["Black"],
+              "sizes": ["Standard"]
+            },
+            {
+              "id": "acc-spigen-005",
+              "name": "Spigen Camera Lens Protector",
+              "image": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb",
+              "description": "Tempered glass lens protector with precise camera cutouts",
+              "rating": 4.7,
+              "comments": 2134,
+              "price": 14.99,
+              "discount": 15,
+              "colors": ["Clear"],
+              "sizes": ["iPhone 15 Pro", "iPhone 15 Pro Max"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
