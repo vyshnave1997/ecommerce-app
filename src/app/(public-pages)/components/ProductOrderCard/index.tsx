@@ -1,8 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Card, Button, InputNumber } from 'antd';
+import { Card, Button } from 'antd';
 import { ShoppingCartOutlined, MinusOutlined, PlusOutlined, CheckOutlined, HeartOutlined, TruckOutlined, LockOutlined, SafetyOutlined } from '@ant-design/icons';
+import { useRouter } from 'next/navigation';
+import { useCart } from '../../context/CartContext';
 
 interface Product {
   id: string;
@@ -23,20 +25,24 @@ interface ProductOrderCardProps {
   product: Product;
   isDarkMode: boolean;
   token: any;
+  selectedColor?: string;
+  selectedSize?: string;
 }
 
-const ProductOrderCard: React.FC<ProductOrderCardProps> = ({ product, isDarkMode, token }) => {
+const ProductOrderCard: React.FC<ProductOrderCardProps> = ({ 
+  product, 
+  isDarkMode, 
+  token,
+  selectedColor,
+  selectedSize 
+}) => {
   const [quantity, setQuantity] = useState(1);
+  const { addToCart, items } = useCart();
+  const router = useRouter();
 
   const discountedPrice = product.discount 
     ? product.price * (1 - product.discount / 100) 
     : product.price;
-
-  const handleQuantityChange = (value: number | null) => {
-    if (value && value > 0) {
-      setQuantity(value);
-    }
-  };
 
   const incrementQuantity = () => {
     setQuantity(prev => prev + 1);
@@ -46,6 +52,47 @@ const ProductOrderCard: React.FC<ProductOrderCardProps> = ({ product, isDarkMode
     if (quantity > 1) {
       setQuantity(prev => prev - 1);
     }
+  };
+
+  const handleAddToCart = () => {
+    const cartItem = {
+      productId: product.id,
+      name: product.name,
+      price: product.price,
+      quantity: quantity,
+      image: product.image,
+      color: selectedColor || product.colors[0],
+      size: selectedSize || product.sizes[0],
+      discount: product.discount,
+      brand: product.brand
+    };
+
+    console.log('Adding to cart:', cartItem); // Debug log
+    addToCart(cartItem);
+    console.log('Cart after adding:', items); // Debug log
+  };
+
+  const handleBuyNow = () => {
+    const cartItem = {
+      productId: product.id,
+      name: product.name,
+      price: product.price,
+      quantity: quantity,
+      image: product.image,
+      color: selectedColor || product.colors[0],
+      size: selectedSize || product.sizes[0],
+      discount: product.discount,
+      brand: product.brand
+    };
+
+    console.log('Buy Now - Adding to cart:', cartItem); // Debug log
+    addToCart(cartItem);
+    
+    // Longer delay to ensure state and localStorage are updated
+    setTimeout(() => {
+      console.log('Navigating to cart...');
+      router.push('/cart');
+    }, 300);
   };
 
   return (
@@ -88,7 +135,7 @@ const ProductOrderCard: React.FC<ProductOrderCardProps> = ({ product, isDarkMode
           fontSize: '13px',
           color: token.colorTextSecondary
         }}>
-          Price per kg, Includes VAT
+          Price per item, Includes VAT
         </div>
       </div>
 
@@ -152,6 +199,7 @@ const ProductOrderCard: React.FC<ProductOrderCardProps> = ({ product, isDarkMode
         icon={<ShoppingCartOutlined />}
         block
         size="large"
+        onClick={handleAddToCart}
         style={{
           height: '52px',
           borderRadius: '8px',
@@ -169,6 +217,7 @@ const ProductOrderCard: React.FC<ProductOrderCardProps> = ({ product, isDarkMode
       <Button
         block
         size="large"
+        onClick={handleBuyNow}
         style={{
           height: '52px',
           borderRadius: '8px',

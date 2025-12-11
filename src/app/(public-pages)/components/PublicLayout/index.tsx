@@ -8,6 +8,7 @@ import { ConfigProvider, theme } from 'antd';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 import LoaderProvider from '../LoaderProvider';
+import { CartProvider } from '../../context/CartContext';
 
 
 interface PublicLayoutProps {
@@ -32,6 +33,7 @@ const PublicLayout: React.FC<PublicLayoutProps> = ({ children }) => {
 
   return (
    <LoaderProvider>
+    <CartProvider>
     <ConfigProvider
       theme={{
         algorithm: darkMode ? theme.darkAlgorithm : theme.defaultAlgorithm,
@@ -55,6 +57,7 @@ const PublicLayout: React.FC<PublicLayoutProps> = ({ children }) => {
         <Footer />
       </div>
     </ConfigProvider>
+    </CartProvider>
     </LoaderProvider>
   );
 };

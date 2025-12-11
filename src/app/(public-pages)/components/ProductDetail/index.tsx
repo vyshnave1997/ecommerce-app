@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Card, Rate, Tag, Button, Radio } from 'antd';
+import { Card, Rate, Button, Radio, Row, Col } from 'antd';
 import { CheckCircleFilled, ShoppingCartOutlined, MessageOutlined } from '@ant-design/icons';
 import Image from 'next/image';
 
@@ -24,11 +24,22 @@ interface ProductDetailProps {
   product: Product;
   isDarkMode: boolean;
   token: any;
+  selectedColor: string;
+  selectedSize: string;
+  onColorChange: (color: string) => void;
+  onSizeChange: (size: string) => void;
 }
 
-const ProductDetail: React.FC<ProductDetailProps> = ({ product, isDarkMode, token }) => {
+const ProductDetail: React.FC<ProductDetailProps> = ({ 
+  product, 
+  isDarkMode, 
+  token,
+  selectedColor,
+  selectedSize,
+  onColorChange,
+  onSizeChange
+}) => {
   const [selectedImage, setSelectedImage] = useState(0);
-  const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
 
   // Mock multiple images (in real app, these would come from product data)
   const images = [
@@ -232,19 +243,25 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product, isDarkMode, toke
                 color: token.colorText,
                 marginBottom: '12px'
               }}>
-                Color:
+                Color: <span style={{ color: token.colorPrimary }}>{selectedColor}</span>
               </div>
-              <div style={{ display: 'flex', gap: '8px' }}>
+              <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
                 {product.colors.map((color) => (
                   <Button
                     key={color}
+                    onClick={() => onColorChange(color)}
                     style={{
                       height: '44px',
                       minWidth: '100px',
                       borderRadius: '6px',
-                      backgroundColor: isDarkMode ? '#2a2a2a' : '#ffffff',
-                      border: isDarkMode ? '1px solid #404040' : '1px solid #d9d9d9',
-                      color: token.colorText
+                      backgroundColor: selectedColor === color 
+                        ? token.colorPrimary 
+                        : isDarkMode ? '#2a2a2a' : '#ffffff',
+                      border: selectedColor === color 
+                        ? 'none' 
+                        : isDarkMode ? '1px solid #404040' : '1px solid #d9d9d9',
+                      color: selectedColor === color ? '#ffffff' : token.colorText,
+                      fontWeight: selectedColor === color ? 600 : 400
                     }}
                   >
                     {color}
@@ -261,12 +278,12 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product, isDarkMode, toke
                 color: token.colorText,
                 marginBottom: '12px'
               }}>
-                Size:
+                Size: <span style={{ color: token.colorPrimary }}>{selectedSize}</span>
               </div>
               <Radio.Group
                 value={selectedSize}
-                onChange={(e) => setSelectedSize(e.target.value)}
-                style={{ display: 'flex', gap: '8px' }}
+                onChange={(e) => onSizeChange(e.target.value)}
+                style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}
               >
                 {product.sizes.map((size) => (
                   <Radio.Button
@@ -299,8 +316,5 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product, isDarkMode, toke
     </Card>
   );
 };
-
-// Adding Row and Col imports that were missing
-import { Row, Col } from 'antd';
 
 export default ProductDetail;
