@@ -86,7 +86,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleTheme }) => {
                 color: '#ffffff',
                 boxShadow: '0 4px 12px rgba(102, 126, 234, 0.3)',
               }}>
-                B
+                V
               </div>
               <span style={{
                 fontSize: '1.5rem',
@@ -94,7 +94,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleTheme }) => {
                 color: darkMode ? '#ffffff' : '#000000',
                 transition: 'color 0.3s ease',
               }}>
-                Brand<span style={{ color: '#667eea' }}>name</span>
+                VIKI<span style={{ color: '#667eea' }}>STORE</span>
               </span>
             </div>
 
