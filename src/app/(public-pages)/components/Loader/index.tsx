@@ -21,7 +21,7 @@ const Loader: React.FC<LoaderProps> = ({ onLoadComplete }) => {
       if (onLoadComplete) {
         onLoadComplete();
       }
-    }, 3000);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, [onLoadComplete]);
@@ -115,7 +115,7 @@ const Loader: React.FC<LoaderProps> = ({ onLoadComplete }) => {
             marginBottom: '0.5rem',
             animation: 'pulse 1.5s ease-in-out infinite',
           }}>
-            Loading...
+          
           </h3>
           <p style={{
             fontSize: '0.875rem',

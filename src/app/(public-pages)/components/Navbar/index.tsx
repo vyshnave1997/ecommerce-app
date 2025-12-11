@@ -1,8 +1,10 @@
 // components/Navbar.tsx
 // Main navigation bar with search, cart, and mobile menu support
 
+'use client';
+
 import React, { useState } from 'react';
-import { Badge, Input, Button, Drawer, Menu, Divider, Select } from 'antd';
+import { Badge, Input, Button, Drawer, Menu, Divider } from 'antd';
 import {
   ShoppingCartOutlined,
   HeartOutlined,
@@ -14,14 +16,22 @@ import {
   BulbOutlined,
   BulbFilled,
 } from '@ant-design/icons';
+import { useRouter } from 'next/navigation';
+import { useCart } from '../../context/CartContext';
+import { useWishlist } from '../../context/WishlistContext';
 
 interface NavbarProps {
-  darkMode: boolean; // Current theme state
-  toggleTheme: () => void; // Function to toggle between light/dark mode
+  darkMode: boolean;
+  toggleTheme: () => void;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleTheme }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const router = useRouter();
+  const { getCartCount } = useCart();
+  const { items: wishlistItems } = useWishlist();
+  const cartCount = getCartCount();
+  const wishlistCount = wishlistItems.length;
 
   const categoryItems = [
     { key: '1', label: 'Electronics', icon: '💻' },
@@ -54,7 +64,15 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleTheme }) => {
             padding: '1rem 0',
           }}>
             {/* Logo */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <div 
+              onClick={() => router.push('/')}
+              style={{ 
+                display: 'flex', 
+                alignItems: 'center', 
+                gap: '0.5rem',
+                cursor: 'pointer'
+              }}
+            >
               <div style={{
                 width: '48px',
                 height: '48px',
@@ -191,59 +209,85 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleTheme }) => {
                 }}>Orders</span>
               </div>
 
-              <div style={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                cursor: 'pointer',
-                gap: '0.25rem',
-                transition: 'transform 0.3s ease',
-              }} 
-              className="desktop-only"
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'scale(1.1)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'scale(1)';
-              }}>
-                <HeartOutlined style={{ 
-                  fontSize: '1.5rem', 
-                  color: darkMode ? '#ffffff' : '#666',
-                  transition: 'color 0.3s ease',
-                }} />
-                <span style={{ 
-                  fontSize: '0.75rem', 
-                  color: darkMode ? '#ffffff' : '#666',
-                  transition: 'color 0.3s ease',
-                }}>Saved</span>
-              </div>
+              {/* Wishlist with Badge */}
+              <Badge 
+                count={wishlistCount} 
+                offset={[-5, 5]}
+                style={{
+                  backgroundColor: '#ff4d4f',
+                  boxShadow: '0 0 0 1px #fff',
+                }}
+              >
+                <div 
+                  onClick={() => router.push('/wishlist')}
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    cursor: 'pointer',
+                    gap: '0.25rem',
+                    transition: 'transform 0.3s ease',
+                  }} 
+                  className="desktop-only"
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'scale(1.1)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'scale(1)';
+                  }}
+                >
+                  <HeartOutlined style={{ 
+                    fontSize: '1.5rem', 
+                    color: darkMode ? '#ffffff' : '#666',
+                    transition: 'color 0.3s ease',
+                  }} />
+                  <span style={{ 
+                    fontSize: '0.75rem', 
+                    color: darkMode ? '#ffffff' : '#666',
+                    transition: 'color 0.3s ease',
+                  }}>Saved</span>
+                </div>
+              </Badge>
 
-              <div style={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                cursor: 'pointer',
-                gap: '0.25rem',
-                transition: 'transform 0.3s ease',
-              }} 
-              className="desktop-only"
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'scale(1.1)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'scale(1)';
-              }}>
-                <ShoppingCartOutlined style={{ 
-                  fontSize: '1.5rem', 
-                  color: darkMode ? '#ffffff' : '#666',
-                  transition: 'color 0.3s ease',
-                }} />
-                <span style={{ 
-                  fontSize: '0.75rem', 
-                  color: darkMode ? '#ffffff' : '#666',
-                  transition: 'color 0.3s ease',
-                }}>My cart</span>
-              </div>
+              {/* Cart with Badge - Desktop */}
+              <Badge 
+                count={cartCount} 
+                offset={[-5, 5]}
+                style={{
+                  backgroundColor: '#ff4d4f',
+                  boxShadow: '0 0 0 1px #fff',
+                }}
+              >
+                <div 
+                  onClick={() => router.push('/cart')}
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    cursor: 'pointer',
+                    gap: '0.25rem',
+                    transition: 'transform 0.3s ease',
+                  }} 
+                  className="desktop-only"
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'scale(1.1)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'scale(1)';
+                  }}
+                >
+                  <ShoppingCartOutlined style={{ 
+                    fontSize: '1.5rem', 
+                    color: darkMode ? '#ffffff' : '#666',
+                    transition: 'color 0.3s ease',
+                  }} />
+                  <span style={{ 
+                    fontSize: '0.75rem', 
+                    color: darkMode ? '#ffffff' : '#666',
+                    transition: 'color 0.3s ease',
+                  }}>My cart</span>
+                </div>
+              </Badge>
 
               <div style={{
                 display: 'flex',
@@ -458,10 +502,43 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleTheme }) => {
                   }} 
                 />
               )}
-              <ShoppingCartOutlined style={{ 
-                fontSize: '1.5rem',
-                color: darkMode ? '#ffffff' : '#000000',
-              }} />
+              
+              {/* Wishlist with Badge - Mobile */}
+              <Badge 
+                count={wishlistCount} 
+                offset={[-3, 3]}
+                style={{
+                  backgroundColor: '#ff4d4f',
+                }}
+              >
+                <HeartOutlined 
+                  onClick={() => router.push('/wishlist')}
+                  style={{ 
+                    fontSize: '1.5rem',
+                    color: darkMode ? '#ffffff' : '#000000',
+                    cursor: 'pointer',
+                  }} 
+                />
+              </Badge>
+              
+              {/* Cart with Badge - Mobile */}
+              <Badge 
+                count={cartCount} 
+                offset={[-3, 3]}
+                style={{
+                  backgroundColor: '#ff4d4f',
+                }}
+              >
+                <ShoppingCartOutlined 
+                  onClick={() => router.push('/cart')}
+                  style={{ 
+                    fontSize: '1.5rem',
+                    color: darkMode ? '#ffffff' : '#000000',
+                    cursor: 'pointer',
+                  }} 
+                />
+              </Badge>
+              
               <UserOutlined style={{ 
                 fontSize: '1.5rem',
                 color: darkMode ? '#ffffff' : '#000000',

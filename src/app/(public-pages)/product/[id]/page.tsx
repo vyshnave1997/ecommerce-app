@@ -63,25 +63,7 @@ const ProductPage: React.FC = () => {
 
   return (
     <div >
-      {/* <div style={{
-        maxWidth: '1400px',
-        margin: '0 auto'
-      }}> */}
-        {/* Back Button */}
-        {/* <Button
-          icon={<ArrowLeftOutlined />}
-          onClick={() => router.back()}
-          style={{
-            marginBottom: '24px',
-            height: '44px',
-            borderRadius: '8px',
-            backgroundColor: isDarkMode ? '#1a1a1a' : '#ffffff',
-            border: isDarkMode ? '1px solid #303030' : '1px solid #e0e0e0',
-            color: token.colorText
-          }}
-        >
-          Back to Products
-        </Button> */}
+    
 <PublicLayout>
         <ProductDetailsLayout product={product} />
         </PublicLayout>

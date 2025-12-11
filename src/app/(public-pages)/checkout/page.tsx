@@ -1,10 +1,15 @@
-export default function Page() {
+'use client';
+
+import React from 'react';
+import PublicLayout from '../components/PublicLayout';
+import CheckoutLayout from '../components/CheckoutLayout';
+
+const CheckoutPage: React.FC = () => {
   return (
-    <div className="container mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-6">Page Title</h1>
-      <div>
-        {/* Page content */}
-      </div>
-    </div>
-  )
-}
+    <PublicLayout>
+      <CheckoutLayout />
+    </PublicLayout>
+  );
+};
+
+export default CheckoutPage;
