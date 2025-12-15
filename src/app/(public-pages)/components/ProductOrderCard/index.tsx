@@ -1,10 +1,11 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Card, Button } from 'antd';
-import { ShoppingCartOutlined, MinusOutlined, PlusOutlined, CheckOutlined, HeartOutlined, TruckOutlined, LockOutlined, SafetyOutlined } from '@ant-design/icons';
+import { Card, Button, message } from 'antd';
+import { ShoppingCartOutlined, MinusOutlined, PlusOutlined, CheckOutlined, HeartOutlined, HeartFilled, TruckOutlined, LockOutlined, SafetyOutlined } from '@ant-design/icons';
 import { useRouter } from 'next/navigation';
 import { useCart } from '../../context/CartContext';
+import { useWishlist } from '../../context/WishlistContext';
 
 interface Product {
   id: string;
@@ -38,7 +39,10 @@ const ProductOrderCard: React.FC<ProductOrderCardProps> = ({
 }) => {
   const [quantity, setQuantity] = useState(1);
   const { addToCart, items } = useCart();
+  const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
   const router = useRouter();
+
+  const inWishlist = isInWishlist(product.id);
 
   const discountedPrice = product.discount 
     ? product.price * (1 - product.discount / 100) 
@@ -67,9 +71,10 @@ const ProductOrderCard: React.FC<ProductOrderCardProps> = ({
       brand: product.brand
     };
 
-    console.log('Adding to cart:', cartItem); // Debug log
+    console.log('Adding to cart:', cartItem);
     addToCart(cartItem);
-    console.log('Cart after adding:', items); // Debug log
+    message.success('Added to cart!');
+    console.log('Cart after adding:', items);
   };
 
   const handleBuyNow = () => {
@@ -85,14 +90,34 @@ const ProductOrderCard: React.FC<ProductOrderCardProps> = ({
       brand: product.brand
     };
 
-    console.log('Buy Now - Adding to cart:', cartItem); // Debug log
+    console.log('Buy Now - Adding to cart:', cartItem);
     addToCart(cartItem);
     
-    // Longer delay to ensure state and localStorage are updated
     setTimeout(() => {
       console.log('Navigating to cart...');
       router.push('/cart');
     }, 300);
+  };
+
+  const handleWishlistToggle = () => {
+    if (inWishlist) {
+      removeFromWishlist(product.id);
+      message.success('Removed from wishlist');
+    } else {
+      const wishlistItem = {
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        image: product.image,
+        color: selectedColor || product.colors[0],
+        size: selectedSize || product.sizes[0],
+        discount: product.discount,
+        rating: product.rating,
+        brand: product.brand
+      };
+      addToWishlist(wishlistItem);
+      message.success('Added to wishlist!');
+    }
   };
 
   return (
@@ -234,21 +259,25 @@ const ProductOrderCard: React.FC<ProductOrderCardProps> = ({
 
       {/* Add to Wishlist Button */}
       <Button
-        icon={<HeartOutlined />}
+        icon={inWishlist ? <HeartFilled /> : <HeartOutlined />}
         block
         size="large"
+        onClick={handleWishlistToggle}
         style={{
           height: '52px',
           borderRadius: '8px',
           fontSize: '16px',
           fontWeight: 500,
           marginBottom: '24px',
-          backgroundColor: isDarkMode ? '#2a2a2a' : '#f5f5f5',
+          backgroundColor: inWishlist 
+            ? (isDarkMode ? 'rgba(255, 77, 79, 0.15)' : 'rgba(255, 77, 79, 0.1)')
+            : (isDarkMode ? '#2a2a2a' : '#f5f5f5'),
           border: 'none',
-          color: token.colorText
+          color: inWishlist ? '#ff4d4f' : token.colorText,
+          transition: 'all 0.3s ease'
         }}
       >
-        Add to wishlist
+        {inWishlist ? 'Remove from wishlist' : 'Add to wishlist'}
       </Button>
 
       {/* Features List */}

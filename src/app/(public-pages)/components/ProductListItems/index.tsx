@@ -1,11 +1,13 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
-import { Row, Col, Card, Button, Select, theme, Rate, Pagination } from 'antd';
+import { Row, Col, Card, Button, Select, theme, Rate, Pagination, message } from 'antd';
 import { HeartOutlined, HeartFilled, ShoppingCartOutlined, AppstoreOutlined, UnorderedListOutlined } from '@ant-design/icons';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import productsData from '@/data/products.json';
+import { useWishlist } from '../../context/WishlistContext';
+import { useCart } from '../../context/CartContext';
 import type { FilterState } from '../ProductListFilters';
 
 const { Option } = Select;
@@ -32,11 +34,12 @@ interface ProductListProps {
 const ProductList: React.FC<ProductListProps> = ({ filters }) => {
   const { token } = theme.useToken();
   const router = useRouter();
+  const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
+  const { addToCart } = useCart();
   const isDarkMode = token.colorBgLayout === '#000000' || token.colorBgContainer === '#1f1f1f';
   
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortBy, setSortBy] = useState('best-match');
-  const [favorites, setFavorites] = useState<Set<string>>(new Set());
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 12; // 4 rows × 3 columns = 12 products per page
 
@@ -117,16 +120,46 @@ const ProductList: React.FC<ProductListProps> = ({ filters }) => {
     setCurrentPage(1);
   }, [filters, sortBy]);
 
-  const toggleFavorite = (productId: string) => {
-    setFavorites(prev => {
-      const newFavorites = new Set(prev);
-      if (newFavorites.has(productId)) {
-        newFavorites.delete(productId);
-      } else {
-        newFavorites.add(productId);
-      }
-      return newFavorites;
-    });
+  const toggleWishlist = (product: Product, e: React.MouseEvent) => {
+    e.stopPropagation();
+    
+    if (isInWishlist(product.id)) {
+      removeFromWishlist(product.id);
+      message.success('Removed from wishlist');
+    } else {
+      const wishlistItem = {
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        image: product.image,
+        color: product.colors[0],
+        size: product.sizes[0],
+        discount: product.discount,
+        rating: product.rating,
+        brand: product.brand,
+      };
+      addToWishlist(wishlistItem);
+      message.success('Added to wishlist!');
+    }
+  };
+
+  const handleAddToCart = (product: Product, e: React.MouseEvent) => {
+    e.stopPropagation();
+    
+    const cartItem = {
+      productId: product.id,
+      name: product.name,
+      price: product.price,
+      quantity: 1,
+      image: product.image,
+      color: product.colors[0],
+      size: product.sizes[0],
+      discount: product.discount,
+      brand: product.brand,
+    };
+    
+    addToCart(cartItem);
+    message.success('Added to cart!');
   };
 
   const handleProductClick = (productId: string) => {
@@ -134,7 +167,7 @@ const ProductList: React.FC<ProductListProps> = ({ filters }) => {
   };
 
   const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
-    const isFavorite = favorites.has(product.id);
+    const isFavorite = isInWishlist(product.id);
     const discountedPrice = product.discount 
       ? product.price * (1 - product.discount / 100) 
       : product.price;
@@ -209,15 +242,14 @@ const ProductList: React.FC<ProductListProps> = ({ filters }) => {
           <Button
             type="text"
             icon={isFavorite ? <HeartFilled style={{ color: '#ff4d4f' }} /> : <HeartOutlined />}
-            onClick={(e) => {
-              e.stopPropagation();
-              toggleFavorite(product.id);
-            }}
+            onClick={(e) => toggleWishlist(product, e)}
             style={{
               position: 'absolute',
               top: '12px',
               right: '12px',
-              backgroundColor: isDarkMode ? 'rgba(0, 0, 0, 0.5)' : 'rgba(255, 255, 255, 0.9)',
+              backgroundColor: isFavorite 
+                ? (isDarkMode ? 'rgba(255, 77, 79, 0.2)' : 'rgba(255, 77, 79, 0.15)')
+                : (isDarkMode ? 'rgba(0, 0, 0, 0.5)' : 'rgba(255, 255, 255, 0.9)'),
               borderRadius: '50%',
               width: '36px',
               height: '36px',
@@ -225,7 +257,8 @@ const ProductList: React.FC<ProductListProps> = ({ filters }) => {
               alignItems: 'center',
               justifyContent: 'center',
               border: 'none',
-              boxShadow: '0 2px 8px rgba(0, 0, 0, 0.15)'
+              boxShadow: '0 2px 8px rgba(0, 0, 0, 0.15)',
+              transition: 'all 0.3s ease'
             }}
           />
 
@@ -341,10 +374,7 @@ const ProductList: React.FC<ProductListProps> = ({ filters }) => {
           <Button
             icon={<ShoppingCartOutlined />}
             block
-            onClick={(e) => {
-              e.stopPropagation();
-              // Add to cart functionality
-            }}
+            onClick={(e) => handleAddToCart(product, e)}
             style={{
               height: '44px',
               borderRadius: '8px',
@@ -352,7 +382,16 @@ const ProductList: React.FC<ProductListProps> = ({ filters }) => {
               border: 'none',
               color: token.colorText,
               fontWeight: 500,
-              marginTop: 'auto'
+              marginTop: 'auto',
+              transition: 'all 0.3s ease'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = '#5f63f2';
+              e.currentTarget.style.color = '#ffffff';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = isDarkMode ? '#2a2a2a' : '#e6e6e6';
+              e.currentTarget.style.color = token.colorText;
             }}
           >
             Add to cart
