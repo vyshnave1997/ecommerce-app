@@ -1,10 +1,11 @@
 // components/Navbar.tsx
-// Main navigation bar with search, cart, and mobile menu support
+// Main navigation bar with search, cart, profile menu, and mobile menu support
 
 'use client';
 
 import React, { useState } from 'react';
-import { Badge, Input, Button, Drawer, Menu, Divider } from 'antd';
+import { Badge, Input, Button, Drawer, Menu, Divider, Dropdown } from 'antd';
+import type { MenuProps } from 'antd';
 import {
   ShoppingCartOutlined,
   HeartOutlined,
@@ -13,8 +14,17 @@ import {
   SearchOutlined,
   DownOutlined,
   ShoppingOutlined,
-  BulbOutlined,
-  BulbFilled,
+  MoonOutlined,
+  SunOutlined,
+  SettingOutlined,
+  LogoutOutlined,
+  HistoryOutlined,
+  CreditCardOutlined,
+  EnvironmentOutlined,
+  BellOutlined,
+  SafetyOutlined,
+  UpOutlined,
+  AppstoreOutlined,
 } from '@ant-design/icons';
 import { useRouter } from 'next/navigation';
 import { useCart } from '../../context/CartContext';
@@ -43,6 +53,119 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleTheme }) => {
     { key: '7', label: 'Animal and pets', icon: '🐾' },
     { key: '8', label: 'Toys for Kids', icon: '🧸' },
     { key: '9', label: 'More category', icon: '⋯' },
+  ];
+
+  // Profile dropdown menu items
+  const profileMenuItems: MenuProps['items'] = [
+    {
+      key: 'profile-header',
+      label: (
+        <div style={{ 
+          padding: '8px 0',
+          borderBottom: `1px solid ${darkMode ? '#404040' : '#f0f0f0'}`,
+          marginBottom: '8px',
+        }}>
+          <div style={{ 
+            fontWeight: 600, 
+            fontSize: '15px',
+            color: darkMode ? '#ffffff' : '#000000',
+          }}>
+            John Doe
+          </div>
+          <div style={{ 
+            fontSize: '13px',
+            color: darkMode ? '#999' : '#666',
+            marginTop: '2px',
+          }}>
+            john.doe@example.com
+          </div>
+        </div>
+      ),
+      disabled: true,
+    },
+    {
+      key: 'my-account',
+      icon: <UserOutlined />,
+      label: 'My Account',
+      onClick: () => router.push('/account'),
+    },
+    {
+      key: 'orders',
+      icon: <ShoppingOutlined />,
+      label: 'My Orders',
+      onClick: () => router.push('/orders'),
+    },
+    {
+      key: 'wishlist',
+      icon: <HeartOutlined />,
+      label: (
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <span>Wishlist</span>
+          {wishlistCount > 0 && (
+            <Badge 
+              count={wishlistCount} 
+              style={{ 
+                backgroundColor: '#ff4d4f',
+                fontSize: '10px',
+                height: '18px',
+                lineHeight: '18px',
+                minWidth: '18px',
+              }} 
+            />
+          )}
+        </div>
+      ),
+      onClick: () => router.push('/wishlist'),
+    },
+    {
+      type: 'divider',
+    },
+    {
+      key: 'addresses',
+      icon: <EnvironmentOutlined />,
+      label: 'Saved Addresses',
+      onClick: () => router.push('/addresses'),
+    },
+    {
+      key: 'payment',
+      icon: <CreditCardOutlined />,
+      label: 'Payment Methods',
+      onClick: () => router.push('/payment-methods'),
+    },
+    {
+      type: 'divider',
+    },
+    {
+      key: 'notifications',
+      icon: <BellOutlined />,
+      label: 'Notifications',
+      onClick: () => router.push('/notifications'),
+    },
+    {
+      key: 'settings',
+      icon: <SettingOutlined />,
+      label: 'Settings',
+      onClick: () => router.push('/settings'),
+    },
+    {
+      key: 'help',
+      icon: <SafetyOutlined />,
+      label: 'Help & Support',
+      onClick: () => router.push('/help'),
+    },
+    {
+      type: 'divider',
+    },
+    {
+      key: 'logout',
+      icon: <LogoutOutlined />,
+      label: <span style={{ color: '#ff4d4f' }}>Logout</span>,
+      danger: true,
+      onClick: () => {
+        // Handle logout logic
+        console.log('Logging out...');
+      },
+    },
   ];
 
   return (
@@ -162,13 +285,13 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleTheme }) => {
                 }}
               >
                 {darkMode ? (
-                  <BulbFilled style={{ 
+                  <SunOutlined style={{ 
                     fontSize: '1.5rem', 
                     color: '#ffd666',
                     filter: 'drop-shadow(0 0 8px rgba(255, 214, 102, 0.5))',
                   }} />
                 ) : (
-                  <BulbOutlined style={{ 
+                  <MoonOutlined style={{ 
                     fontSize: '1.5rem', 
                     color: '#666',
                   }} />
@@ -189,7 +312,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleTheme }) => {
                 cursor: 'pointer',
                 gap: '0.25rem',
                 transition: 'transform 0.3s ease',
-              }} 
+              }}  onClick={() => router.push('/orders')}
               className="desktop-only"
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'scale(1.1)';
@@ -289,32 +412,51 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleTheme }) => {
                 </div>
               </Badge>
 
-              <div style={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                cursor: 'pointer',
-                gap: '0.25rem',
-                transition: 'transform 0.3s ease',
-              }} 
-              className="desktop-only"
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'scale(1.1)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'scale(1)';
-              }}>
-                <UserOutlined style={{ 
-                  fontSize: '1.5rem', 
-                  color: darkMode ? '#ffffff' : '#666',
-                  transition: 'color 0.3s ease',
-                }} />
-                <span style={{ 
-                  fontSize: '0.75rem', 
-                  color: darkMode ? '#ffffff' : '#666',
-                  transition: 'color 0.3s ease',
-                }}>Sign in</span>
-              </div>
+              {/* Profile Dropdown */}
+              <Dropdown
+                menu={{ 
+                  items: profileMenuItems,
+                  style: {
+                    background: darkMode ? '#1a1a1a' : '#ffffff',
+                    border: `1px solid ${darkMode ? '#404040' : '#e0e0e0'}`,
+                    borderRadius: '8px',
+                    minWidth: '240px',
+                    boxShadow: darkMode 
+                      ? '0 4px 16px rgba(0, 0, 0, 0.5)' 
+                      : '0 4px 16px rgba(0, 0, 0, 0.1)',
+                  },
+                }}
+                placement="bottomRight"
+                arrow={{ pointAtCenter: true }}
+                trigger={['click']}
+              >
+                <div style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  cursor: 'pointer',
+                  gap: '0.25rem',
+                  transition: 'transform 0.3s ease',
+                }} 
+                className="desktop-only"
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'scale(1.1)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'scale(1)';
+                }}>
+                  <UserOutlined style={{ 
+                    fontSize: '1.5rem', 
+                    color: darkMode ? '#ffffff' : '#666',
+                    transition: 'color 0.3s ease',
+                  }} />
+                  <span style={{ 
+                    fontSize: '0.75rem', 
+                    color: darkMode ? '#ffffff' : '#666',
+                    transition: 'color 0.3s ease',
+                  }}>Profile</span>
+                </div>
+              </Dropdown>
             </div>
           </div>
 
@@ -427,33 +569,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleTheme }) => {
               More <DownOutlined style={{ fontSize: '0.75rem' }} />
             </a>
             
-            <div style={{ 
-              marginLeft: 'auto', 
-              display: 'flex', 
-              alignItems: 'center', 
-              gap: '0.5rem',
-              cursor: 'pointer',
-              padding: '0.5rem 1rem',
-              borderRadius: '8px',
-              transition: 'background 0.3s ease',
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = darkMode ? '#2a2a2a' : '#f5f5f5';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = 'transparent';
-            }}>
-              <span style={{ 
-                color: darkMode ? '#ffffff' : '#666', 
-                fontSize: '0.9rem',
-                transition: 'color 0.3s ease',
-              }}>DE Germany, € EUR</span>
-              <DownOutlined style={{ 
-                fontSize: '0.75rem', 
-                color: darkMode ? '#ffffff' : '#666',
-                transition: 'color 0.3s ease',
-              }} />
-            </div>
+
           </div>
 
           {/* Mobile Header */}
@@ -483,7 +599,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleTheme }) => {
 
             <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
               {darkMode ? (
-                <BulbFilled 
+                <SunOutlined 
                   onClick={toggleTheme}
                   style={{ 
                     fontSize: '1.5rem',
@@ -493,7 +609,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleTheme }) => {
                   }} 
                 />
               ) : (
-                <BulbOutlined 
+                <MoonOutlined 
                   onClick={toggleTheme}
                   style={{ 
                     fontSize: '1.5rem',
@@ -539,10 +655,27 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleTheme }) => {
                 />
               </Badge>
               
-              <UserOutlined style={{ 
-                fontSize: '1.5rem',
-                color: darkMode ? '#ffffff' : '#000000',
-              }} />
+              {/* Profile Dropdown - Mobile */}
+              <Dropdown
+                menu={{ 
+                  items: profileMenuItems,
+                  style: {
+                    background: darkMode ? '#1a1a1a' : '#ffffff',
+                    border: `1px solid ${darkMode ? '#404040' : '#e0e0e0'}`,
+                    borderRadius: '8px',
+                    minWidth: '240px',
+                  },
+                }}
+                placement="bottomRight"
+                arrow={{ pointAtCenter: true }}
+                trigger={['click']}
+              >
+                <UserOutlined style={{ 
+                  fontSize: '1.5rem',
+                  color: darkMode ? '#ffffff' : '#000000',
+                  cursor: 'pointer',
+                }} />
+              </Dropdown>
             </div>
           </div>
         </div>
@@ -671,6 +804,19 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleTheme }) => {
           .desktop-search {
             display: none !important;
           }
+        }
+
+        /* Custom styles for dropdown menu items */
+        .ant-dropdown-menu-item {
+          color: ${darkMode ? '#ffffff' : '#000000'} !important;
+        }
+        
+        .ant-dropdown-menu-item:hover {
+          background: ${darkMode ? '#2a2a2a' : '#f5f5f5'} !important;
+        }
+        
+        .ant-dropdown-menu-item-icon {
+          color: ${darkMode ? '#999' : '#666'} !important;
         }
       `}</style>
     </>
