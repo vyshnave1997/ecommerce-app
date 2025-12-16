@@ -465,9 +465,9 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleTheme }) => {
             display: 'flex',
             alignItems: 'center',
             gap: '2rem',
-            paddingBottom: '1rem',
+            paddingBottom: '0.2rem',
             borderTop: `1px solid ${darkMode ? '#404040' : '#e0e0e0'}`,
-            paddingTop: '1rem',
+            paddingTop: '0.2rem',
             transition: 'border-color 0.3s ease',
           }}>
             <Button 
