@@ -14,14 +14,19 @@ const CartPage: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const { token } = theme.useToken();
   
-  // Check multiple conditions for dark mode
-  const isDarkMode = 
-    token.colorBgLayout === '#000000' || 
-    token.colorBgContainer === '#1f1f1f' ||
-    token.colorBgContainer === '#141414' ||
-    document.documentElement.classList.contains('dark');
 
-  console.log('Dark Mode:', isDarkMode, 'BgLayout:', token.colorBgLayout, 'BgContainer:', token.colorBgContainer);
+  // State for dark mode
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const dark =
+      token.colorBgLayout === '#000000' ||
+      token.colorBgContainer === '#1f1f1f' ||
+      token.colorBgContainer === '#141414' ||
+      (typeof document !== 'undefined' && document.documentElement.classList.contains('dark'));
+    setIsDarkMode(dark);
+    console.log('Dark Mode:', dark, 'BgLayout:', token.colorBgLayout, 'BgContainer:', token.colorBgContainer);
+  }, [token]);
 
   useEffect(() => {
     // Small delay to ensure cart is loaded from localStorage
